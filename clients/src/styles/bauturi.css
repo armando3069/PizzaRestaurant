@@ -1,0 +1,12 @@
+.RemoveOption {
+  display:flex;
+  
+}
+
+@media (max-width: 741px) {
+  .RemoveOption {
+    display: none;
+  }
+}
+
+

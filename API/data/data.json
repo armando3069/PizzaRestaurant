@@ -1,0 +1,463 @@
+[
+  {
+    "id": 1,
+    "name": "Pepperoni Pizza",
+    "image": "https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExZjZsemtyNmNpYno3M3hrb2s5Y2Jpd2R0MGgxbDhlNnVheTd1NGxwaCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/YN7Xm4gQ54rRbC5Se5/giphy.gif",
+    "price": 110,
+    "ingredients": "Sos Pomodori pelati, vînătă coaptă, roșii, ceapă roșie, maioneză de post.",
+    "category": "Pizza"
+  },
+  {
+    "id": 2,
+    "name": "Margherita Pizza",
+    "image": "https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExMHpqd2F3NWg1aWNvNHN4ZmNwaWRtMDl5dTB1Yjc5MW1neHZmbWkzaCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3osxYoufeOGOA7xiX6/giphy.gif",
+    "price": 110,
+    "ingredients": "Sos Pomodori pelati, vînătă coaptă, roșii, ceapă roșie, maioneză de post.",
+    "category": "Pizza"
+  },
+  {
+    "id": 3,
+    "name": "Special Pizza",
+    "image": "https://dishcrawl.com/wp-content/uploads/2021/05/new-york-pizza.jpg",
+    "price": 256,
+    "ingredients": "Sos Pomodori pelati, vînătă coaptă, roșii, ceapă roșie, maioneză de post.",
+    "category": "Pizza"
+  },
+  {
+    "id": 4,
+    "name": "Vegan Pizza",
+    "image": "https://images.prismic.io/eataly-us/527aa8aa-73b6-42f4-89ec-18d96fd88502_ech-quattro-mani-matt-roan-pizza-horizontal-web.jpg?auto=compress,format",
+    "price": 170,
+    "ingredients": "Sos Pomodori pelati, vînătă coaptă, roșii, ceapă roșie, maioneză de post.",
+    "category": "Pizza"
+  },
+  {
+    "id": 5,
+    "name": "Pineapple Pizza",
+    "image": "https://static01.nyt.com/images/2023/03/29/multimedia/23HAMREX2-pineapple-ham-pizza-qwct/HAMREX2-pineapple-ham-pizza-qwct-superJumbo.jpg",
+    "price": 120,
+    "ingredients": "Sos Pomodori pelati, vînătă coaptă, roșii, ceapă roșie, maioneză de post.",
+    "category": "Pizza"
+  },
+  {
+    "id": 6,
+    "name": "Expensive Pizza",
+    "image": "https://www.simplyrecipes.com/thmb/KE6iMblr3R2Db6oE8HdyVsFSj2A=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__simply_recipes__uploads__2019__09__easy-pepperoni-pizza-lead-3-1024x682-583b275444104ef189d693a64df625da.jpg",
+    "price": 197,
+    "ingredients": "Sos Pomodori pelati, vînătă coaptă, roșii, ceapă roșie, maioneză de post.",
+    "category": "Pizza"
+  },
+  {
+    "id": 7,
+    "name": "Pepperoni Pizza",
+    "image": "https://www.simplyrecipes.com/thmb/KE6iMblr3R2Db6oE8HdyVsFSj2A=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__simply_recipes__uploads__2019__09__easy-pepperoni-pizza-lead-3-1024x682-583b275444104ef189d693a64df625da.jpg",
+    "price": 150,
+    "ingredients": "Sos Pomodori pelati, vînătă coaptă, roșii, ceapă roșie, maioneză de post.",
+    "category": "Pizza"
+  },
+  {
+    "id": 8,
+    "name": "Margherita Pizza",
+    "image": "https://dishcrawl.com/wp-content/uploads/2021/05/california-pizza.jpg",
+    "price": 11,
+    "ingredients": "Sos Pomodori pelati, vînătă coaptă, roșii, ceapă roșie, maioneză de post.",
+    "category": "Pizza"
+  },
+  {
+    "id": 9,
+    "name": "Special Pizza",
+    "image": "https://toc.h-cdn.co/assets/16/50/2048x1536/sd-aspect-1481914051-industry-kitchen-02.jpg",
+    "price": 256,
+    "ingredients": "Sos Pomodori pelati, vînătă coaptă, roșii, ceapă roșie, maioneză de post.",
+    "category": "Pizza"
+  },
+  {
+    "id": 10,
+    "name": "Vegan Pizza",
+    "image": "https://images.prismic.io/eataly-us/527aa8aa-73b6-42f4-89ec-18d96fd88502_ech-quattro-mani-matt-roan-pizza-horizontal-web.jpg?auto=compress,format",
+    "price": 170,
+    "ingredients": "Sos Pomodori pelati, vînătă coaptă, roșii, ceapă roșie, maioneză de post.",
+    "category": "Pizza"
+  },
+  {
+    "id": 11,
+    "name": "Pineapple Pizza",
+    "image": "https://static01.nyt.com/images/2023/03/29/multimedia/23HAMREX2-pineapple-ham-pizza-qwct/HAMREX2-pineapple-ham-pizza-qwct-superJumbo.jpg",
+    "price": 100,
+    "ingredients": "Sos Pomodori pelati, vînătă coaptă, roșii, ceapă roșie, maioneză de post.",
+    "category": "Pizza"
+  },
+  {
+    "id": 12,
+    "name": "Expensive Pizza",
+    "image": "https://toc.h-cdn.co/assets/16/50/2048x1536/sd-aspect-1481914051-industry-kitchen-02.jpg",
+    "price": 197,
+    "ingredients": "Sos Pomodori pelati, vînătă coaptă, roșii, ceapă roșie, maioneză de post.",
+    "category": "Pizza"
+  },
+  {
+    "id": 13,
+    "name": "Special Pizza",
+    "image": "https://www.simplyrecipes.com/thmb/KE6iMblr3R2Db6oE8HdyVsFSj2A=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__simply_recipes__uploads__2019__09__easy-pepperoni-pizza-lead-3-1024x682-583b275444104ef189d693a64df625da.jpg",
+    "price": 256,
+    "ingredients": "Sos Pomodori pelati, vînătă coaptă, roșii, ceapă roșie, maioneză de post.",
+    "category": "Pizza"
+  },
+  {
+    "id": 14,
+    "name": "Vegan Pizza",
+    "image": "https://images.prismic.io/eataly-us/527aa8aa-73b6-42f4-89ec-18d96fd88502_ech-quattro-mani-matt-roan-pizza-horizontal-web.jpg?auto=compress,format",
+    "price": 170,
+    "ingredients": "Sos Pomodori pelati, vînătă coaptă, roșii, ceapă roșie, maioneză de post.",
+    "category": "Pizza"
+  },
+  {
+    "id": 15,
+    "name": "Pineapple Pizza",
+    "image": "https://static01.nyt.com/images/2023/03/29/multimedia/23HAMREX2-pineapple-ham-pizza-qwct/HAMREX2-pineapple-ham-pizza-qwct-superJumbo.jpg",
+    "price": 233,
+    "ingredients": "Sos Pomodori pelati, vînătă coaptă, roșii, ceapă roșie, maioneză de post.",
+    "category": "Pizza"
+  },
+  {
+    "id": 16,
+    "name": "Expensive Pizza",
+    "image": "https://toc.h-cdn.co/assets/16/50/2048x1536/sd-aspect-1481914051-industry-kitchen-02.jpg",
+    "price": 197,
+    "ingredients": "Sos Pomodori pelati, vînătă coaptă, roșii, ceapă roșie, maioneză de post.",
+    "category": "Pizza"
+  },
+  {
+    "id": 17,
+    "name": "Calzone formagio",
+    "image": "https://burnhard-springlane-gmbh.stream.prepr.io/w_2304,format_jpg,q_70/https://burnhard-springlane-gmbh.stream.prepr.io/w_1080/2vjv7ihmml1s-2gvkgb5gkukh-pizza-calzone-titelbild.jpg",
+    "price": 197,
+    "ingredients": "Sos Pomodori pelati, vînătă coaptă, roșii, ceapă roșie, maioneză de post.",
+    "category": "Calzone"
+  },
+  {
+    "id": 18,
+    "name": "Calzone clasic",
+    "image": "https://lirp.cdn-website.com/33406c6e/dms3rep/multi/opt/calzone-640w.jpg",
+    "price": 197,
+    "ingredients": "Sos Pomodori pelati, vînătă coaptă, roșii, ceapă roșie, maioneză de post.",
+    "category": "Calzone"
+  },
+  {
+    "id": 19,
+    "name": "Calzone italian",
+    "image": "https://thecozyapron.com/wp-content/uploads/2021/01/calzone_thecozyapron_1.jpg",
+    "price": 197,
+    "ingredients": "Sos Pomodori pelati, vînătă coaptă, roșii, ceapă roșie, maioneză de post.",
+    "category": "Calzone"
+  },
+
+  {
+    "id": 20,
+    "name": "Paste Gamberetti",
+    "image": "https://corso.md/public/foods/thumbs/version_305x0x305x0x1/a2ef211d1a570dc3d1d6691f58409cec.jpg",
+    "price": 197,
+    "ingredients": "Sos Pomodori pelati, vînătă coaptă, roșii, ceapă roșie, maioneză de post.",
+    "category": "Paste"
+  },
+  {
+    "id": 21,
+    "name": "Quatro formaggi",
+    "image": "https://corso.md/public/foods/thumbs/version_305x0x305x0x1/192085414b99b68c3cafd728cead552e.jpg",
+    "price": 197,
+    "ingredients": "Sos Pomodori pelati, vînătă coaptă, roșii, ceapă roșie, maioneză de post.",
+    "category": "Paste"
+  },
+  {
+    "id": 22,
+    "name": "Paste Carbonara",
+    "image": "https://corso.md/public/foods/thumbs/version_305x0x305x0x1/cc5961e031d6c2b7be25debc4e62545b.jpg",
+    "price": 197,
+    "ingredients": "Sos Pomodori pelati, vînătă coaptă, roșii, ceapă roșie, maioneză de post.",
+    "category": "Paste"
+  },
+  {
+    "id": 23,
+    "name": "Frutti di Mare",
+    "image": "https://corso.md/public/foods/thumbs/version_305x0x305x0x1/7ab37221ae43ea08bd862bb4a8bdace0.jpg",
+    "price": 197,
+    "ingredients": "Sos Pomodori pelati, vînătă coaptă, roșii, ceapă roșie, maioneză de post.",
+    "category": "Paste"
+  },
+  {
+    "id": 24,
+    "name": "Paste con verdura",
+    "image": "https://corso.md/public/foods/thumbs/version_305x0x305x0x1/08c65eabc4fe798d896f38c7018278c4.jpg",
+    "price": 197,
+    "ingredients": "Sos Pomodori pelati, vînătă coaptă, roșii, ceapă roșie, maioneză de post.",
+    "category": "Paste"
+  },
+  {
+    "id": 25,
+    "name": "Salata Grek",
+    "image": "https://corso.md/public/foods/thumbs/version_305x0x305x0x1/f2e1b53a8054687a64ba95e75a6a33e0.jpg",
+    "price": 197,
+    "ingredients": "Sos Pomodori pelati, vînătă coaptă, roșii, ceapă roșie, maioneză de post.",
+    "category": "Salate"
+  },
+  {
+    "id": 26,
+    "name": "Salata cu Creveti",
+    "image": "https://corso.md/public/foods/thumbs/version_305x0x305x0x1/7887d5f6bfe430570bba703730153b1b.jpg",
+    "price": 197,
+    "ingredients": "Sos Pomodori pelati, vînătă coaptă, roșii, ceapă roșie, maioneză de post.",
+    "category": "Salate"
+  },
+  {
+    "id": 27,
+    "name": "Calzone Siciliano",
+    "image": "https://abeautifulmess.com/wp-content/uploads/2022/07/easy-calzone-recipe.jpg",
+    "price": 197,
+    "ingredients": "Sos Pomodori pelati, vînătă coaptă, roșii, ceapă roșie, maioneză de post.",
+    "category": "Calzone"
+  },
+  {
+    "id": 28,
+    "name": "Salata cu Ton",
+    "image": "https://corso.md/public/foods/thumbs/version_305x0x305x0x1/acad4c9ba9319d0bfadea0840a7a1175.jpg",
+    "price": 197,
+    "ingredients": "Sos Pomodori pelati, vînătă coaptă, roșii, ceapă roșie, maioneză de post.",
+    "category": "Salate"
+  },
+  {
+    "id": 29,
+    "name": "Salata Caprese",
+    "image": "https://corso.md/public/foods/thumbs/version_305x0x305x0x1/a1c01c0e24481c3b4206bed1b0a78609.jpg",
+    "price": 197,
+    "ingredients": "Sos Pomodori pelati, vînătă coaptă, roșii, ceapă roșie, maioneză de post.",
+    "category": "Salate"
+  },
+  {
+    "id": 30,
+    "name": "Salata Cezar",
+    "image": "https://corso.md/public/foods/thumbs/version_305x0x305x0x1/8f184f1e6171c7aa385d8af27b92067f.jpg",
+    "price": 197,
+    "ingredients": "Sos Pomodori pelati, vînătă coaptă, roșii, ceapă roșie, maioneză de post.",
+    "category": "Salate"
+  },
+  {
+    "id": 31,
+    "name": "Salata Fresh",
+    "image": "https://corso.md/public/foods/thumbs/version_305x0x305x0x1/fad3313c4b6772b5facec45f04f313f4.jpg",
+    "price": 197,
+    "ingredients": "Sos Pomodori pelati, vînătă coaptă, roșii, ceapă roșie, maioneză de post.",
+    "category": "Salate"
+  },
+  {
+    "id": 32,
+    "name": "Salata Primavera",
+    "image": "https://corso.md/public/foods/thumbs/version_305x0x305x0x1/8691b131807dc830e1df40f70401ccd1.jpg",
+    "price": 197,
+    "ingredients": "Sos Pomodori pelati, vînătă coaptă, roșii, ceapă roșie, maioneză de post.",
+    "category": "Salate"
+  },
+  {
+    "id": 33,
+    "name": "Salata Calda",
+    "image": "https://corso.md/public/foods/thumbs/version_305x0x305x0x1/280a0a4c3815b7a2222aa1c3c2640e78.jpg",
+    "price": 197,
+    "ingredients": "Sos Pomodori pelati, vînătă coaptă, roșii, ceapă roșie, maioneză de post.",
+    "category": "Salate"
+  },
+  {
+    "id": 34,
+    "name": "Salmon Cesar",
+    "image": "https://corso.md/public/foods/thumbs/version_305x0x305x0x1/b69b4bcc6a1903d1aecf2a40876da919.jpg",
+    "price": 197,
+    "ingredients": "Sos Pomodori pelati, vînătă coaptă, roșii, ceapă roșie, maioneză de post.",
+    "category": "Salate"
+  },
+  {
+    "id": 35,
+    "name": "Salmon Cesar",
+    "image": "https://corso.md/public/foods/thumbs/version_305x0x305x0x1/b69b4bcc6a1903d1aecf2a40876da919.jpg",
+    "price": 197,
+    "ingredients": "Sos Pomodori pelati, vînătă coaptă, roșii, ceapă roșie, maioneză de post.",
+    "category": "Salate"
+  },
+  {
+    "id": 36,
+    "name": "Ceai",
+    "image": "https://corso.md/public/foods/thumbs/version_305x0x305x0x1/26a0aac1a15d14280ad7dc1598b9ad7a.jpg",
+    "price": 197,
+    "ingredients": "Sos Pomodori pelati, vînătă coaptă, roșii, ceapă roșie, maioneză de post.",
+    "category": "Bauturi",
+    "SubCategory": "Fierbinti"
+  },
+  {
+    "id": 37,
+    "name": "Ceai Bio Infuzie",
+    "image": "https://corso.md/public/foods/thumbs/version_305x0x305x0x1/3aad29ea4baa256abe03330de18218c9.jpg",
+    "price": 197,
+    "ingredients": "Sos Pomodori pelati, vînătă coaptă, roșii, ceapă roșie, maioneză de post.",
+    "category": "Bauturi",
+    "SubCategory": "Fierbinti"
+  },
+  {
+    "id": 38,
+    "name": "Cafea Espresso",
+    "image": "https://corso.md/public/foods/thumbs/version_305x0x305x0x1/3b8fff96889276e0316cdf47268e6259.jpg",
+    "price": 197,
+    "ingredients": "Sos Pomodori pelati, vînătă coaptă, roșii, ceapă roșie, maioneză de post.",
+    "category": "Bauturi",
+    "SubCategory": "Fierbinti"
+  },
+  {
+    "id": 39,
+    "name": "Cafea Americano",
+    "image": "https://corso.md/public/foods/thumbs/version_305x0x305x0x1/7002407ba683a7e5bb59d7d5919872c4.jpg",
+    "price": 197,
+    "ingredients": "Sos Pomodori pelati, vînătă coaptă, roșii, ceapă roșie, maioneză de post.",
+    "category": "Bauturi",
+    "SubCategory": "Fierbinti"
+  },
+  {
+    "id": 40,
+    "name": "Cafea Capuccino",
+    "image": "https://corso.md/public/foods/thumbs/version_305x0x305x0x1/8e8562a6ec1baa434d416d40b9697099.jpg",
+    "price": 197,
+    "ingredients": "Sos Pomodori pelati, vînătă coaptă, roșii, ceapă roșie, maioneză de post.",
+    "category": "Bauturi",
+    "SubCategory": "Fierbinti"
+  },
+  {
+    "id": 41,
+    "name": "Kids Multifruct",
+    "image": "https://corso.md/public/foods/thumbs/version_305x0x305x0x1/423da9269713791c5da089c01d5c7bef.jpg",
+    "price": 16,
+    "ingredients": "Sos Pomodori pelati, vînătă coaptă, roșii, ceapă roșie, maioneză de post.",
+    "category": "Bauturi",
+    "SubCategory": "Racoritoare"
+  },
+  {
+    "id": 42,
+    "name": "Cafea Latte",
+    "image": "https://corso.md/public/foods/thumbs/version_305x0x305x0x1/a8d6f30bbc708e6551980bb6d7d8a0ab.jpg",
+    "price": 197,
+    "ingredients": "Sos Pomodori pelati, vînătă coaptă, roșii, ceapă roșie, maioneză de post.",
+    "category": "Bauturi",
+    "SubCategory": "Fierbinti"
+  },
+  {
+    "id": 43,
+    "name": "Rich Mar",
+    "image": "https://corso.md/public/foods/thumbs/version_305x0x305x0x1/a1d36744feca9d349d4dcf03457d5f54.jpg",
+    "price": 197,
+    "ingredients": "Sos Pomodori pelati, vînătă coaptă, roșii, ceapă roșie, maioneză de post.",
+    "category": "Bauturi",
+    "SubCategory": "Racoritoare"
+  },
+  {
+    "id": 44,
+    "name": "Rich Portocala",
+    "image": "https://corso.md/public/foods/thumbs/version_305x0x305x0x1/e121779ad404b5ab1fc7c7a17f8a8dd6.jpg",
+    "price": 197,
+    "ingredients": "Sos Pomodori pelati, vînătă coaptă, roșii, ceapă roșie, maioneză de post.",
+    "category": "Bauturi",
+    "SubCategory": "Racoritoare"
+  },
+  {
+    "id": 45,
+    "name": "Sprite",
+    "image": "https://corso.md/public/foods/thumbs/version_305x0x305x0x1/e6f9bedb22ac4bf499d7d944fe081bc2.jpg",
+    "price": 30,
+    "ingredients": "Sos Pomodori pelati, vînătă coaptă, roșii, ceapă roșie, maioneză de post.",
+    "category": "Bauturi",
+    "SubCategory": "Racoritoare"
+  },
+  {
+    "id": 46,
+    "name": "Fuzetea lamaie",
+    "image": "https://corso.md/public/foods/thumbs/version_305x0x305x0x1/c7db1c2531ac6461047129ae9fc40cfe.jpg",
+    "price": 30,
+    "ingredients": "Sos Pomodori pelati, vînătă coaptă, roșii, ceapă roșie, maioneză de post.",
+    "category": "Bauturi",
+    "SubCategory": "Racoritoare"
+  },
+  {
+    "id": 47,
+    "name": "Cappy Portocala",
+    "image": "https://corso.md/public/foods/thumbs/version_305x0x305x0x1/80cc486e3374ad8bc50f5a824611828e.jpg",
+    "price": 30,
+    "ingredients": "Sos Pomodori pelati, vînătă coaptă, roșii, ceapă roșie, maioneză de post.",
+    "category": "Bauturi",
+    "SubCategory": "Racoritoare"
+  },
+  {
+    "id": 48,
+    "name": "Fuzetea Fructe de Padure",
+    "image": "https://corso.md/public/foods/thumbs/version_305x0x305x0x1/374bcad6e83c793b790b20ea67faeb53.jpg",
+    "price": 30,
+    "ingredients": "Sos Pomodori pelati, vînătă coaptă, roșii, ceapă roșie, maioneză de post.",
+    "category": "Bauturi",
+    "SubCategory": "Racoritoare"
+  },
+  {
+    "id": 49,
+    "name": "Fuzetea Piersic",
+    "image": "https://corso.md/public/foods/thumbs/version_305x0x305x0x1/20f74dfa04feb7e6458e5cf85263d05f.jpg",
+    "price": 30,
+    "ingredients": "Sos Pomodori pelati, vînătă coaptă, roșii, ceapă roșie, maioneză de post.",
+    "category": "Bauturi",
+    "SubCategory": "Racoritoare"
+  },
+  {
+    "id": 50,
+    "name": "Coca Cola",
+    "image": "https://corso.md/public/foods/thumbs/version_305x0x305x0x1/f313bc2437bcf28bcde9e4e663e9a4d2.jpg",
+    "price": 30,
+    "ingredients": "Sos Pomodori pelati, vînătă coaptă, roșii, ceapă roșie, maioneză de post.",
+    "category": "Bauturi",
+    "SubCategory": "Racoritoare"
+  },
+  {
+    "id": 51,
+    "name": "Fanta",
+    "image": "https://corso.md/public/foods/thumbs/version_305x0x305x0x1/66dc9866eda69bccd2ae289a64e92a08.jpg",
+    "price": 30,
+    "ingredients": "Sos Pomodori pelati, vînătă coaptă, roșii, ceapă roșie, maioneză de post.",
+    "category": "Bauturi",
+    "SubCategory": "Racoritoare"
+  },
+  {
+    "id": 52,
+    "name": "Bergenbier",
+    "image": "https://corso.md/public/foods/thumbs/version_305x0x305x0x1/3fa7da1b017eb987fce690534cb13fa4.jpg",
+    "price": 45,
+    "ingredients": "Sos Pomodori pelati, vînătă coaptă, roșii, ceapă roșie, maioneză de post.",
+    "category": "Bauturi",
+    "SubCategory": "Bere"
+  },
+  {
+    "id": 53,
+    "name": "Staropramen",
+    "image": "https://corso.md/public/foods/thumbs/version_305x0x305x0x1/a6742fde8fe746451a6bd86b2132fd4d.jpg",
+    "price": 60,
+    "ingredients": "Sos Pomodori pelati, vînătă coaptă, roșii, ceapă roșie, maioneză de post.",
+    "category": "Bauturi",
+    "SubCategory": "Bere"
+  },
+  {
+    "id": 54,
+    "name": "Bergenbier NonAlcool",
+    "image": "https://corso.md/public/foods/thumbs/version_305x0x305x0x1/5f59ce0b41ab7c83fea8a690f3a077bc.jpg",
+    "price": 45,
+    "ingredients": "Sos Pomodori pelati, vînătă coaptă, roșii, ceapă roșie, maioneză de post.",
+    "category": "Bauturi",
+    "SubCategory": "Bere"
+  },
+  {
+    "id": 55,
+    "name": "Beck's",
+    "image": "https://corso.md/public/foods/thumbs/version_305x0x305x0x1/0c7bef8f4553cbfb93a55805d8642ff9.jpg",
+    "price": 45,
+    "ingredients": "Sos Pomodori pelati, vînătă coaptă, roșii, ceapă roșie, maioneză de post.",
+    "category": "Bauturi",
+    "SubCategory": "Bere"
+  }
+]

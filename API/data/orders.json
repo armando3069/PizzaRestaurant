@@ -1,0 +1,76 @@
+[
+  {
+    "id": "cbbeafc3-ae3c-47cf-ba9d-18c51e80dd10",
+    "order": {
+      "0": {
+        "name": "Pepperoni Pizza",
+        "image": "https://zugo.md/wp-content/uploads/2023/02/classic-cheese-pizza-FT-RECIPE0422-31a2c938fc2546c9a07b7011658cfd05.jpg",
+        "price": 110,
+        "quantity": 1
+      },
+      "Oras": "",
+      "Strada": "",
+      "Bloc": "",
+      "Apt": "",
+      "Scara": "",
+      "Etajul": "",
+      "Data": "2024-08-06T20:24:53.778Z"
+    }
+  },
+  {
+    "id": "39116eae-cdb2-4daf-8dfc-e5331cc305a6",
+    "order": {
+      "0": {
+        "name": "Pepperoni Pizza",
+        "image": "https://zugo.md/wp-content/uploads/2023/02/classic-cheese-pizza-FT-RECIPE0422-31a2c938fc2546c9a07b7011658cfd05.jpg",
+        "price": 110,
+        "quantity": 4
+      },
+      "1": {
+        "name": "Quatro formaggi",
+        "image": "https://corso.md/public/foods/thumbs/version_305x0x305x0x1/192085414b99b68c3cafd728cead552e.jpg",
+        "price": 197,
+        "quantity": 2
+      },
+      "2": {
+        "name": "Coca Cola",
+        "image": "https://corso.md/public/foods/thumbs/version_305x0x305x0x1/f313bc2437bcf28bcde9e4e663e9a4d2.jpg",
+        "price": 30,
+        "quantity": 4
+      },
+      "3": {
+        "name": "Fanta",
+        "image": "https://corso.md/public/foods/thumbs/version_305x0x305x0x1/66dc9866eda69bccd2ae289a64e92a08.jpg",
+        "price": 30,
+        "quantity": 2
+      },
+      "Oras": "Durlești",
+      "Strada": "Strada Fîntînilor",
+      "Bloc": "2",
+      "Apt": "45",
+      "Scara": "55",
+      "Etajul": "55",
+      "Data": "2024-08-06T21:08:49.841Z"
+    }
+  },
+  {
+    "id": "05d2968d-98f1-4dd0-a983-5a0d466c62b3",
+    "order": {
+      "0": {
+        "name": "Margherita Pizza",
+        "image": "https://dishcrawl.com/wp-content/uploads/2021/05/california-pizza.jpg",
+        "price": 110,
+        "quantity": 1
+      },
+      "Oras": "Stăuceni",
+      "Strada": {
+        "label": "Strada Mitropolit Varlaam"
+      },
+      "Bloc": "2",
+      "Apt": "2",
+      "Scara": "22",
+      "Etajul": "",
+      "Data": "2024-08-07T15:03:34.308Z"
+    }
+  }
+]

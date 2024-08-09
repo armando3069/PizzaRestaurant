@@ -1,0 +1,278 @@
+@import url("../font/cera_pro.css");
+
+.cart-viewport_shop {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #768f88;
+}
+
+.cart_shop {
+  max-width: 800px;
+  width: 100%;
+  margin-top: 80px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+
+.container_shop{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(255, 255, 255);
+  padding-left:10px ;
+}
+.cartItem {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100px;
+  position: relative;
+  align-items: center;
+  /* box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2); */
+  /* border-radius: 25px; */
+  /* margin: 20px; */
+} 
+
+.cart {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+  }
+.payload{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+}
+
+  .container_shoping {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 5px;
+    border-radius: 16px;
+    background-color:#fff;
+    margin-bottom: 20px;
+  }
+
+  .couting{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: #fff;
+    border-radius: 16px;
+    height: 100%;
+    width: 100%;
+    font-family: "Cera Pro";
+    padding: 10px 0px 20px;
+
+  }
+
+  .dataSend{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-content: center;
+    background-color: #fff;
+    border-radius: 16px;
+    height: 100%;
+    width: 100%;
+    font-family: "Cera Pro";
+    padding: 10px 20px 20px;
+    margin-bottom: 20px;
+
+  }
+  .adres_shop{
+    padding: 0px 20px 0px;
+  }
+  .dataSendContainer{
+    padding: 10px 10px 20px;
+    display: flex;
+
+  }
+
+  .mt{
+    margin-top: 100px;
+    
+  }
+  
+  
+  .cartItem img {
+    width: 100px;
+  }
+
+  .text_name_shop{
+    width: 137px;
+    font-size: 1.2rem;
+    font-family: "Cera Pro"; 
+   }
+
+  .line{
+
+    width: 100%;
+    border: none;
+    border-top: 1px solid #ccc;
+  }
+
+
+
+  .input_shop{
+    position: relative;
+    top: -7px;
+  }
+
+  .cartItem .description {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+    font-size: 20px;
+  }
+  .countHandler{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  .countHandler input {
+    width: 40px;
+    text-align: center;
+    font-weight: bolder;
+  }
+  .close_shop{
+    cursor: pointer;
+    position: relative;
+    top: -3px;
+    color: #ccc;
+  }
+  .price_shop{
+    font-size: 20px;
+  }
+
+/* ///////////////////////////////////////////////////////////////////////////////////////// */
+  .checkout{
+    display: flex;
+    flex-direction: column;
+  }
+
+
+  .subtotoal{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px 30px 0 ;
+  }
+.policy{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 10px 30px 0px ;
+}
+.politica_shop{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+  font-size: 0.9rem;
+  padding: 10px 0px 15px ;
+}
+.total_price
+{
+  color: #a73f3d;
+}
+
+
+  /* ///////////////////////////////////////////////////////////////////////////////////////// */
+
+
+  .checkout button {
+    width: 200px;
+    height: 50px;
+    background-color:#a73f3d;
+    font-family: "Cera Pro";
+    font-weight: 600;
+    color: white;
+    border: none;
+    border-radius: 22px;
+    cursor: pointer;
+    font-size: 1rem;
+
+  }
+  .add_shop{
+   color: #ccc;
+   width: 25px;
+   font-size: 20px;
+  }
+  .remove_shop{
+    color: #ccc;
+    width: 25px;
+    font-size: 20px;
+  }
+  .close_shop{
+    font-size: 25px;
+   }
+
+   .item_shop{
+    font-size: 20px;
+   }
+
+
+  @media (max-width: 630px) {
+    .text_name_shop{
+      font-size: 1rem;
+    }
+  }
+  
+
+  @media (max-width: 489px) {
+
+    .cartItem {
+      /* flex-direction: column; */
+      width:100%;
+      margin-top: 10px;
+      height: 100px;
+    }
+    .cartItem img {
+      width: 80px;
+      margin-bottom: 10px;
+      /* height: 200px; */
+    }
+    .cartItem .description {
+      justify-content: space-between;
+
+    }
+
+    .add_shop{
+      color: #ccc;
+     font-size: 20px;
+     }
+
+     .close_shop{
+      font-size: 25px;
+     }
+     .price_shop{
+      font-size: 15px;
+     }
+     .item_shop{
+      font-size: 15px;
+     }
+     .policy{
+      flex-direction: column;
+      
+     }
+
+     .checkout button {
+      width: 100%;
+      
+     }
+  }

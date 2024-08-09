@@ -1,0 +1,356 @@
+@import url("https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Coming+Soon&display=swap");
+@import url("../font/cera_pro.css");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.menu-viewport {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #768f88;
+}
+
+.menu {
+  max-width: 1266px;
+  width: 100%;
+  margin-top: 80px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.filter_container {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  padding-left: 1rem;
+}
+
+.filterBTN {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: space-between;
+  width: 500px;
+  font-size: 1rem;
+  font-family: "Cera Pro";
+  color: #fff;
+  text-align: center;
+}
+.filterBTN_bauturi {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: space-between;
+  width: 600px;
+  font-size: 1rem;
+  font-family: "Cera Pro";
+  color: #fff;
+  text-align: center;
+}
+
+.spreMeniu{
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 1rem;
+  font-family: "Cera Pro";
+  text-decoration: none;
+}
+.spreMeniuBauturi{
+  display: flex;
+  flex-direction: row;
+  width: 43%;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 1rem;
+  font-family: "Cera Pro";
+  text-decoration: none;
+}
+
+.linkPizza{
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+}
+.all {
+  padding: 2px 10px;
+  border: 1px solid #ffff;
+  border-radius: 16px;
+  cursor: pointer;
+}
+.active {
+  border: 2px solid rgb(248, 188, 10);
+  padding: 2px 10px;
+  border-radius: 16px;
+  cursor: pointer;
+}
+
+.menuTitle {
+  font-size: 5em;
+  color: white;
+  font-family: "Coming Soon", cursive;
+  font-weight: 600;
+  font-style: normal;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.category_title {
+  font-family: "Coming Soon", cursive;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 2rem;
+}
+
+.container_Logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: baseline;
+  align-content: center;
+}
+
+.bigO_logo {
+  width: 60px;
+}
+
+
+.menuList {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; /* Schimbat la wrap pentru flexbox */
+  gap: 20px; /* Spațiu de 20px între carduri */
+  width: 100%;
+  padding: 10px;
+  overflow-y: auto;
+}
+.panelDate img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.container {
+  flex: 1 1 calc(25% - 20px); /* Ajustează în funcție de numărul de carduri pe ecran */
+  max-width: 300px;
+  width: 100%;
+  background-color: white;
+  border-radius: 18px;
+  position: relative;
+  padding-bottom: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  min-height: 380px; /* Ajustează înălțimea minimă dacă este necesar */
+}
+
+#img_menu {
+  width: 100%;
+  border-radius: 18px;
+  object-fit: cover;
+  margin-bottom: 10px;
+  height: 250px; /* Setează o înălțime fixă pentru imagine */
+}
+
+.desc_menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 10px;
+  flex-grow: 1; /* Face ca această secțiune să umple spațiul disponibil */
+}
+
+.info {
+  color: #a5a7a9;
+  cursor: pointer;
+}
+
+.info_menu {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+}
+
+.title_menu {
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 24px;
+  color: #4b4f54;
+  font-family: "Cera Pro";
+}
+
+.price_menu {
+  font-size: 28px;
+  color: #4b4f54;
+  font-weight: bold;
+  font-family: "Cera Pro";
+}
+
+.grams_containers {
+  display: flex;
+  justify-content: flex-start;
+  width: 90%;
+}
+
+.grams_menu {
+  color: #a5a7a9;
+  font-size: 15px;
+  font-family: "Cera Pro";
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.price_container {
+  display: flex;
+  flex-direction: row;
+}
+
+.modal_menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 130px;
+  right: 15px;
+  background-color: rgba(113, 135, 130, 0.9);
+  width: 200px;
+  height: 50px;
+  padding: 25px 20px;
+  border-radius: 16px;
+  font-size: 14px;
+  font-family: "Cera Pro";
+  color: #fff;
+  text-align: center;
+}
+
+.close_modal {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+}
+
+.price_box {
+  display: flex;
+  align-items: center;
+  width: 90%;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.currency_menu {
+  font-family: "Cera Pro";
+  font-weight: bold;
+  color: #4b4f54;
+  font-size: 0.8em;
+  margin-left: 5px;
+}
+
+.shop_menu {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-left: auto;
+}
+
+.logo {
+  cursor: pointer;
+  z-index: 2;
+}
+
+.bg_logo {
+  background-color: #fbb418;
+  width: 48px;
+  height: 48px;
+  border-radius: 100%;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.amount_menu {
+  background-color: #c04a49;
+  width: 24px;
+  height: 23px;
+  border-radius: 100%;
+  color: white;
+  font-family: "Cera Pro";
+  font-weight: 500;
+  text-align: center;
+  font-size: 15px;
+  position: absolute;
+  top: -5px;
+  left: 32px;
+  z-index: 3;
+}
+
+.carousel-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.react-multi-carousel-list {
+  display: flex;
+  flex-wrap: nowrap; /* Asigură că cardurile sunt afișate într-o singură linie */
+  padding: 1.6rem 0 2rem 0;
+}
+
+.react-multi-carousel-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px; /* Adaugă padding pentru a separa elementele */
+}
+
+.react-multi-carousel-item--active {
+  transform: scale(
+    1
+  ); /* Poți ajusta această valoare dacă cardurile sunt micșorate */
+}
+
+@media only screen and (max-width: 1304px) {
+  .container {
+    flex: 1 1 calc(33.33% - 20px); /* 3 carduri pe ecran */
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .container {
+    flex: 1 1 calc(50% - 20px); /* 2 carduri pe ecran */
+  }
+}
+
+@media only screen and (max-width: 780px) {
+  .container {
+    flex: 1 1 calc(100% - 20px); /* 1 card pe ecran */
+    margin: 10px 0;
+  }
+
+  .menu {
+    margin-top: 20px;
+  }
+
+  .price_menu {
+    font-size: 24px;
+  }
+
+  .title_menu {
+    font-size: 18px;
+  }
+
+  .grams_menu {
+    font-size: 13px;
+  }
+  .RemoveOption{
+ display: none;
+  }
+}

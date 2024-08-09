@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital@1&display=swap');
+.contact{
+    display: flex;
+    width: 100%;
+    height: 90%;
+}
+
+.contact .lSide{
+    background-image: url(../assets/back.jpg);
+    width: 40%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    
+}
+
+ .contact .rSide{
+    display: flex;
+    background-color: rgb(185, 182, 181);
+    width: 60%;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 110px;
+    
+}
+.rSide .title{
+    font-size: 50px;
+    font-family: 'Balsamiq Sans', cursive;
+    text-shadow: 1px 3px 0px #ff0000;
+
+}
+
+ .name{
+    width: 400px;
+    height: 50px;
+    border-radius: 10px;
+    border:none;
+    outline: none;
+    margin-bottom: 20px;
+    font-size: 20px;
+    margin-top: 50px;
+}
+.email:focus{
+    box-shadow: -2px 1px 16px 1px #dd8888;
+    
+}
+.name:focus{
+    box-shadow: -2px 1px 16px 1px #dd8888;
+    
+}
+.message:focus{
+    box-shadow: -2px 1px 16px 1px #dd8888;
+    
+}
+.email{
+    width: 400px;
+    height: 50px;
+    border-radius: 10px;
+    border:none;
+    outline: none;
+    margin-bottom: 20px;
+    font-size: 20px;
+
+}
+
+.buton{
+    width: 90px;
+    height: 50px;
+    border-radius: 10px;
+    border:none;
+    outline: none;
+    font-size: 20px;
+    font-weight: 800;
+    background: linear-gradient(146deg, #000000 56%, #f80606 56%);
+    margin-top: 20px;
+    color: white;
+    transition: 0.3s ease-in;
+}
+.buton:hover{
+    font-size: 25px;
+}
+
+.message{
+    border-radius: 10px;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+@media only screen and (max-width: 1000px) {
+    .contact .lSide{
+        display: none;
+    }
+    .contact .rSide{
+        width: 100%;
+    }
+
+    .rSide .title{
+        margin-right: 4rem;
+    }
+
+    .message{
+        font-size: 15px;
+    }
+
+    .buton
+    {
+        width: 200px;
+        margin-left: 2em;
+    }
+    .name
+    {
+        font-size: 15px;
+        width: 300px;
+    }
+    .email
+    {
+        font-size: 15px;
+        width: 300px;
+    }
+
+    .contact .rSide{
+        background-image: url(../assets/back2.jpg);
+        background-size: cover;
+  
+    }
+}
