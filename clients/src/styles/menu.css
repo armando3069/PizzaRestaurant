@@ -43,6 +43,11 @@
   color: #fff;
   text-align: center;
 }
+.RemoveOption{
+  display: flex;
+  width: 70%;
+  justify-content: space-around;
+}
 .filterBTN_bauturi {
   display: flex;
   flex-direction: row;
@@ -351,6 +356,6 @@
     font-size: 13px;
   }
   .RemoveOption{
- display: none;
+    display: none;
   }
 }
