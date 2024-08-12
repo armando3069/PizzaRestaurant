@@ -93,8 +93,8 @@ app.post("/create-checkout-session", async (req, res) => {
         quantity: item.quantity, // Asigură-te că este număr
       })),
       mode: "payment",
-      success_url: "http://localhost:3000/success",
-      cancel_url: "http://localhost:3000/",
+      success_url: "http://localhost:5175/success",
+      cancel_url: "http://localhost:5175/",
     });
 
     console.log("Created checkout session:", session);

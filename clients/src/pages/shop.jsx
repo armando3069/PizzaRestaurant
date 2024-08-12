@@ -48,7 +48,7 @@ const Shop = () => {
       <div className="cart_shop">
         <div className="payload">
           {isCartEmpty ? (
-            <h1>Your Cart is empty</h1>
+            <img src="https://www.adasglobal.com/img/empty-cart.png" alt="" />
           ) : (
             <>
               <div className="container_shoping">

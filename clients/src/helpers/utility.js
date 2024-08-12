@@ -41,16 +41,7 @@ export const landingPanel = [
     id: 2,
     image:
       "https://corso.md/public/slider/thumbs/version_1280x540x1280x540x1/295edd123e75d8e07e2b144e2c059106.jpg",
-
   },
-  {
-    id: 3,
-    image:
-      "  https://media.giphy.com/media/3o7aD2saalBwwftBIY/giphy.gif",
-
-  },
-
-
 ];
 export const durlestiStreat = [
   { label: "Strada Ștefan-Vodă" },
@@ -227,7 +218,7 @@ export const durlestiStreat = [
   { label: "Strada Drumul Morilor" },
   { label: "Strada Liviu Deleanu" },
 ];
-export const stauceniStreat =[
+export const stauceniStreat = [
   { label: "Strada Ştefan cel Mare" },
   { label: "Strada Mitropolit Varlaam" },
   { label: "Strada Grigore Ureche" },
@@ -255,8 +246,8 @@ export const stauceniStreat =[
   { label: "Strada Salcâmilor" },
   { label: "Strada Speranței" },
   { label: "Strada Tineretului" },
-  { label: "Strada Tudor Vladimirescu" }
-]
+  { label: "Strada Tudor Vladimirescu" },
+];
 
 export const chisinauStreat = [
   { label: "Bulevardul Constantin Negruzzi" },
