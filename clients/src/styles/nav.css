@@ -15,7 +15,7 @@
     height: 80px;
     background-color: #768f88; 
     position: relative;
-    z-index: 4;  
+    z-index: 1001;  
     
 }
 
