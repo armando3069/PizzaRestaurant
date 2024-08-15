@@ -223,10 +223,9 @@
   align-items: center;
   position: absolute;
   bottom: 130px;
-  right: 15px;
+  right: 20px;
+  left: 20px;
   background-color: rgba(113, 135, 130, 0.9);
-  width: 200px;
-  height: 50px;
   padding: 25px 20px;
   border-radius: 16px;
   font-size: 14px;
@@ -239,6 +238,7 @@
   position: absolute;
   top: 5px;
   right: 10px;
+  cursor: pointer;
 }
 
 .price_box {
