@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useMemo } from "react";
 import "../styles/menu.css";
 
 import Panel from "../components/panel/panel";
@@ -8,18 +8,23 @@ import Salate from "../components/salateCategory/salate";
 import Bauturi from "../components/bauturiCategory/bauturi";
 
 function Menu() {
+  const memoizedPanel = useMemo(() => <Panel />, []);
+  const memoizedPizza = useMemo(() => <Pizza />, []);
+  const memoizedPaste = useMemo(() => <Paste />, []);
+  const memoizedSalate = useMemo(() => <Salate />, []);
+  const memoizedBauturi = useMemo(() => <Bauturi />, []);
+
   return (
     <div className="menu-viewport">
       <div className="menu">
-        <Panel/>
-        <Pizza />
+        {memoizedPanel}
+        {memoizedPizza}
         <hr style={{ margin: "50px" }} />
-        <Paste />
+        {memoizedPaste}
         <hr style={{ margin: "50px" }} />
-        <Salate />
+        {memoizedSalate}
         <hr style={{ margin: "50px" }} />
-        <Bauturi />
-
+        {memoizedBauturi}
       </div>
     </div>
   );
