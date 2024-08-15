@@ -18,6 +18,7 @@ export const ShopContextProvider = (props) => {
 
   useEffect(() => {
     const getDefaultCart = () => {
+
       let cart = {};
       for (let i = 1; i <= menuList.length; i++) {
         cart[i] = 0;
@@ -27,6 +28,11 @@ export const ShopContextProvider = (props) => {
 
     setItemCart(getDefaultCart());
   }, [menuList]);
+
+  useEffect(() => {
+    localStorage.setItem('itemCart', JSON.stringify(itemCart));
+  }, [itemCart]);
+
 
   const addMenu = (itemID) => {
     setItemCart((prev) => ({
