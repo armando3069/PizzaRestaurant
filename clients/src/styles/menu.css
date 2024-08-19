@@ -43,7 +43,7 @@
   color: #fff;
   text-align: center;
 }
-.RemoveOption{
+.RemoveOption {
   display: flex;
   width: 70%;
   justify-content: space-around;
@@ -60,7 +60,7 @@
   text-align: center;
 }
 
-.spreMeniu{
+.spreMeniu {
   display: flex;
   flex-direction: row;
   width: 50%;
@@ -70,7 +70,7 @@
   font-family: "Cera Pro";
   text-decoration: none;
 }
-.spreMeniuBauturi{
+.spreMeniuBauturi {
   display: flex;
   flex-direction: row;
   width: 43%;
@@ -81,7 +81,7 @@
   text-decoration: none;
 }
 
-.linkPizza{
+.linkPizza {
   text-decoration: none;
   color: #fff;
   font-weight: 500;
@@ -127,17 +127,38 @@
   width: 60px;
 }
 
-
+/* ///////////////////////////// -- MENU LIST --  /////////////////////////////////// */
 .menuList {
   display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
   justify-content: center;
-  align-items: center;
-  flex-wrap: wrap; /* Schimbat la wrap pentru flexbox */
-  gap: 20px; /* Spațiu de 20px între carduri */
   width: 100%;
-  padding: 10px;
+  padding: 5px;
   overflow-y: auto;
 }
+
+/* De la 631px în sus, se folosește display: flex */
+@media only screen and (min-width: 631px) {
+  .menuList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+}
+
+/* La 630px și mai jos, se schimbă în display: grid cu 2 elemente pe coloană */
+@media only screen and (max-width: 630px) {
+  .menuList {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+/* ///////////////////////////// -- MENU LIST --  /////////////////////////////////// */
+
 .panelDate img {
   width: 100%;
   height: auto;
@@ -153,7 +174,7 @@
   position: relative;
   padding-bottom: 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  min-height: 380px; /* Ajustează înălțimea minimă dacă este necesar */
+  min-height: 300px; /* Ajustează înălțimea minimă dacă este necesar */
 }
 
 #img_menu {
@@ -267,6 +288,7 @@
 .logo {
   cursor: pointer;
   z-index: 2;
+  font-size: 30px;
 }
 
 .bg_logo {
@@ -339,11 +361,6 @@
     flex: 1 1 calc(100% - 20px); /* 1 card pe ecran */
     margin: 10px 0;
   }
-
-  .menu {
-    margin-top: 20px;
-  }
-
   .price_menu {
     font-size: 24px;
   }
@@ -355,7 +372,96 @@
   .grams_menu {
     font-size: 13px;
   }
-  .RemoveOption{
+  .RemoveOption {
     display: none;
+  }
+}
+
+/* ///////////////////////////// -- RESPONSIVE STYLE --  /////////////////////////////////// */
+
+@media only screen and (max-width: 470px) {
+  .menuList {
+    gap: 15px;
+    padding: 10px;
+  }
+
+  .price_menu {
+    font-size: 18px;
+  }
+
+  .title_menu {
+    font-size: 14px;
+  }
+
+  .grams_menu {
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+
+  #img_menu {
+    margin-bottom: 10px;
+    height: 200px;
+  }
+
+  .desc_menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    flex-grow: 1;
+  }
+
+  .logo {
+    font-size: 25px;
+  }
+
+  .bg_logo {
+    width: 42px;
+    height: 42px;
+  }
+  .amount_menu {
+    width: 20px;
+    height: 20px;
+    font-size: 0.9rem;
+    top: -5px;
+    left: 28px;
+  }
+
+  .price_box {
+    width: 80%;
+  }
+
+  .container {
+    min-height: 300px;
+  }
+
+  .spreMeniu {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 0.8rem;
+    font-family: "Cera Pro";
+    text-decoration: none;
+  }
+
+  .category_title {
+    font-family: "Coming Soon", cursive;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 1.5rem;
+  }
+
+  .bigO_logo {
+    width: 40px;
+  }
+  .menu {
+    margin-top: 70px;
+  }
+
+  .spreMeniuBauturi {
+    width: 100%;
+    font-size: 0.8rem;
   }
 }
