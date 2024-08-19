@@ -146,5 +146,43 @@
       "Etajul": "5",
       "Data": "2024-08-10T08:32:41.050Z"
     }
+  },
+  {
+    "id": "d4d787b8-7d13-41ad-a0d9-1b9be1e6f631",
+    "order": {
+      "0": {
+        "name": "Pizza Fantasia",
+        "image": "https://corso.md/public/foods/thumbs/version_305x0x305x0x1/ab87c1f1f1f2088728e2220b127ad39f.png",
+        "price": 150,
+        "quantity": 4
+      },
+      "1": {
+        "name": "Paste Gamberetti",
+        "image": "https://corso.md/public/foods/thumbs/version_305x0x305x0x1/a2ef211d1a570dc3d1d6691f58409cec.jpg",
+        "price": 197,
+        "quantity": 1
+      },
+      "2": {
+        "name": "Salata cu Ton",
+        "image": "https://corso.md/public/foods/thumbs/version_305x0x305x0x1/acad4c9ba9319d0bfadea0840a7a1175.jpg",
+        "price": 197,
+        "quantity": 1
+      },
+      "3": {
+        "name": "Coca Cola",
+        "image": "https://corso.md/public/foods/thumbs/version_305x0x305x0x1/f313bc2437bcf28bcde9e4e663e9a4d2.jpg",
+        "price": 30,
+        "quantity": 2
+      },
+      "Oras": "Stăuceni",
+      "Strada": {
+        "label": "Strada Orheiului"
+      },
+      "Bloc": "2",
+      "Apt": "2",
+      "Scara": "3",
+      "Etajul": "2",
+      "Data": "2024-08-19T06:59:29.840Z"
+    }
   }
 ]
