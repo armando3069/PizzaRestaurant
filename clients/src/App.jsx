@@ -15,6 +15,7 @@ import BauturiMenu from "./pages/bauturiMenu";
 import SalateMenu from "./pages/salateMenu";
 import { ShopContextProvider } from "./context/shop-context";
 import "./App.css";
+import Signup from './components/auth/signup/signup';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Menu />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/auth" element={<Signup />} />
           <Route path="/shop" element={<Shop />} />
           <Route path="/checkout" element={<CheckoutPage />} />
           <Route path="/success" element={<Succes />} />

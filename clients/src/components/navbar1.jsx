@@ -25,7 +25,7 @@ function navbar1() {
 
   const styleShop={
     color: color ? "#fbb418":"white",
-    fontSize: "40px",
+
   }
   const styleShop2={
     color: color ? "white":"white",
@@ -54,14 +54,14 @@ function navbar1() {
         >
           Menu
         </Link>
-        <Link
+        {/* <Link
           className={
             color ? "navItem color_navItem_dark" : "navItem color_navItem_white"
           }
           to={"/contact"}
         >
           Contact
-        </Link>
+        </Link> */}
       </div>
       <div className="rightSide">
 
@@ -72,7 +72,7 @@ function navbar1() {
           to={"/shop"}
         >
           <div className="shoping">
-          <MdOutlineShoppingCart style={styleShop}  />
+          <MdOutlineShoppingCart style={styleShop} className="acount_nav"  />
           {totalItem ?(
           <div className="shop_item" style={styleShop2}  >
           {totalItem}
@@ -84,9 +84,9 @@ function navbar1() {
           className={
             color ? "navItem color_navItem_dark" : "navItem color_navItem_white"
           }
-          to={"/contact"}
+          to={"/auth"}
         >
-          <MdOutlineAccountCircle style={styleShop} />
+          <MdOutlineAccountCircle className="acount_nav" style={styleShop} />
 
         </Link>
       </div>

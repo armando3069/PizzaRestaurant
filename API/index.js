@@ -3,10 +3,14 @@ const express = require("express");
 const cors = require("cors");
 const path = require("path");
 const fs = require("fs");
+const bcrypt = require('bcryptjs');
+const jwt = require('jsonwebtoken');
 const bodyParser = require('body-parser');
 
 const { v4: uuidv4 } = require('uuid'); // Importă uuid
 const ordersFilePath = path.join(__dirname, '../API/data/orders.json');
+const usersFilePath = path.join(__dirname, '../API/data/users.json');;
+
 
 const { log } = require("console");
 const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
@@ -24,6 +28,8 @@ app.use(bodyParser.json());
 app.use(express.json());
 
 app.use("/images", express.static(path.join(__dirname, "public/images")));
+const users = [];
+const secretKey = 'secret'; // Folosește un secret puternic în producție
 
 app.get("/menu", (req, res) => {
   const menuList = require("./data/data.json");
@@ -69,6 +75,67 @@ app.post("/orders", (req, res) => {
     });
   });
 });
+
+app.post('/register', async (req, res) => {
+  const { username, password } = req.body;
+
+  const hashedPassword = await bcrypt.hash(password, 10);
+
+
+  if (!username || !password) {
+      return res.status(400).json({ message: 'Username și password sunt necesare.' });
+  }
+
+  fs.readFile(usersFilePath, 'utf8', (err, data) => {
+      if (err) throw err;
+
+      const users = JSON.parse(data);
+      const existingUser = users.find(user => user.username === username);
+
+      if (existingUser) {
+          return res.status(400).json({ message: 'Utilizatorul există deja.' });
+      }
+      const newUser = {
+        id: uuidv4(),
+        username,
+        hashedPassword
+    };
+      users.push(newUser);
+      fs.writeFile(usersFilePath, JSON.stringify(users), (err) => {
+          if (err) throw err;
+          res.status(201).json({ message: 'Înregistrare cu succes!' });
+      });
+  });
+});
+
+
+app.post('/login', (req, res) => {
+  const { username, password } = req.body;
+
+  if (!username || !password) {
+      return res.status(400).json({ message: 'Username și password sunt necesare.' });
+  }
+
+  fs.readFile(usersFilePath, 'utf8', (err, data) => {
+      if (err) throw err;
+
+      const users = JSON.parse(data);
+      const user = users.find(user => user.username === username && user.password === password);
+
+      if (!user) {
+          return res.status(400).json({ message: 'Datele sunt incorecte.' });
+      }
+
+      res.status(200).json({ message: 'Autentificare cu succes!' });
+  });
+});
+
+
+
+
+
+
+
 
 app.post("/create-checkout-session", async (req, res) => {
   try {

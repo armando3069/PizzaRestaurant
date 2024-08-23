@@ -38,7 +38,7 @@ function MenuItem({ id, name, image, price, ingredients }) {
                 onClick={() => {
                   addMenu(id);
                 }}
-                size={30}
+                
                 className="logo"
                 color="white"
               />
