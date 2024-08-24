@@ -3,14 +3,13 @@ const express = require("express");
 const cors = require("cors");
 const path = require("path");
 const fs = require("fs");
-const bcrypt = require('bcryptjs');
-const jwt = require('jsonwebtoken');
-const bodyParser = require('body-parser');
+const bcrypt = require("bcryptjs");
+const jwt = require("jsonwebtoken");
+const bodyParser = require("body-parser");
 
-const { v4: uuidv4 } = require('uuid'); // Importă uuid
-const ordersFilePath = path.join(__dirname, '../API/data/orders.json');
-const usersFilePath = path.join(__dirname, '../API/data/users.json');;
-
+const { v4: uuidv4 } = require("uuid"); // Importă uuid
+const ordersFilePath = path.join(__dirname, "../API/data/orders.json");
+const usersFilePath = path.join(__dirname, "../API/data/users.json");
 
 const { log } = require("console");
 const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
@@ -29,22 +28,46 @@ app.use(express.json());
 
 app.use("/images", express.static(path.join(__dirname, "public/images")));
 const users = [];
-const secretKey = 'secret'; // Folosește un secret puternic în producție
+const secretKey = "secret"; // Folosește un secret puternic în producție
 
 app.get("/menu", (req, res) => {
   const menuList = require("./data/data.json");
   res.json(menuList);
 });
 
+app.get('/orders', (req, res) => {
+  const token = req.headers.authorization?.split(' ')[1]; // Extrage tokenul din header
+
+  if (!token) {
+    return res.status(401).json({ message: 'Token lipsă.' });
+  }
+
+  try {
+    const decoded = jwt.verify(token, secretKey);
+    const userId = decoded.id; // ID-ul utilizatorului din token
+    console.log('Decoded userId:', userId);
+
+    fs.readFile(ordersFilePath, 'utf8', (err, data) => {
+      if (err) throw err;
+
+      const orders = JSON.parse(data);
+      // Filtrează comenzile pentru utilizatorul respectiv
+      const userOrders = orders.filter(order => order.UserID === userId);
+      res.status(200).json(userOrders);
+    });
+  } catch (error) {
+    res.status(401).json({ message: 'Token invalid.' });
+  }
+});
 
 
 app.post("/orders", (req, res) => {
-  const newData = { id: uuidv4(),...req.body,  }; // Adaugă un ID unic
+  const newData = { OrderID: uuidv4(), ...req.body }; // Adaugă un ID unic
 
   // Verifică dacă fișierul există
   if (!fs.existsSync(ordersFilePath)) {
     // Dacă nu există, creează-l cu un conținut inițial gol
-    fs.writeFileSync(ordersFilePath, JSON.stringify([], null, 2), 'utf8');
+    fs.writeFileSync(ordersFilePath, JSON.stringify([], null, 2), "utf8");
   }
 
   // Citește conținutul fișierului
@@ -65,77 +88,90 @@ app.post("/orders", (req, res) => {
     jsonData.push(newData);
 
     // Scrie datele actualizate în fișier
-    fs.writeFile(ordersFilePath, JSON.stringify(jsonData, null, 2), "utf8", (err) => {
-      if (err) {
-        console.error(err);
-        return res.status(500).send("Error writing file");
-      }
+    fs.writeFile(
+      ordersFilePath,
+      JSON.stringify(jsonData, null, 2),
+      "utf8",
+      (err) => {
+        if (err) {
+          console.error(err);
+          return res.status(500).send("Error writing file");
+        }
 
-      res.send(newData); 
+        res.send(newData);
+      }
+    );
+  });
+});
+
+app.post("/register", async (req, res) => {
+  const { username, email, password } = req.body;
+
+  const hashedPassword = await bcrypt.hash(password, 10);
+
+  if (!username || !password || !email) {
+    return res
+      .status(400)
+      .json({ message: "Username și password sunt necesare." });
+  }
+
+  fs.readFile(usersFilePath, "utf8", (err, data) => {
+    if (err) throw err;
+
+    const users = JSON.parse(data);
+    const existingUser = users.find((user) => user.username === username);
+
+    if (existingUser) {
+      return res.status(400).json({ message: "Utilizatorul există deja." });
+    }
+    const newUser = {
+      id: uuidv4(),
+      username,
+      email,
+      hashedPassword,
+    };
+    users.push(newUser);
+    fs.writeFile(usersFilePath, JSON.stringify(users), (err) => {
+      if (err) throw err;
+      res.status(201).json({ message: "Înregistrare cu succes!" });
     });
   });
 });
 
-app.post('/register', async (req, res) => {
-  const { username, password } = req.body;
-
-  const hashedPassword = await bcrypt.hash(password, 10);
-
-
-  if (!username || !password) {
-      return res.status(400).json({ message: 'Username și password sunt necesare.' });
-  }
-
-  fs.readFile(usersFilePath, 'utf8', (err, data) => {
-      if (err) throw err;
-
-      const users = JSON.parse(data);
-      const existingUser = users.find(user => user.username === username);
-
-      if (existingUser) {
-          return res.status(400).json({ message: 'Utilizatorul există deja.' });
-      }
-      const newUser = {
-        id: uuidv4(),
-        username,
-        hashedPassword
-    };
-      users.push(newUser);
-      fs.writeFile(usersFilePath, JSON.stringify(users), (err) => {
-          if (err) throw err;
-          res.status(201).json({ message: 'Înregistrare cu succes!' });
-      });
-  });
-});
-
-
-app.post('/login', (req, res) => {
+app.post("/login", (req, res) => {
   const { username, password } = req.body;
 
   if (!username || !password) {
-      return res.status(400).json({ message: 'Username și password sunt necesare.' });
+    return res
+      .status(400)
+      .json({ message: "Username și password sunt necesare." });
   }
 
-  fs.readFile(usersFilePath, 'utf8', (err, data) => {
-      if (err) throw err;
+  fs.readFile(usersFilePath, "utf8", async (err, data) => {
+    if (err) throw err;
 
-      const users = JSON.parse(data);
-      const user = users.find(user => user.username === username && user.password === password);
+    const users = JSON.parse(data);
+    const user = users.find((u) => u.username === username);
 
-      if (!user) {
-          return res.status(400).json({ message: 'Datele sunt incorecte.' });
-      }
+    if (!user || !user.hashedPassword) {
+      return res.status(400).json({ message: "Datele sunt incorecte." });
+    }
 
-      res.status(200).json({ message: 'Autentificare cu succes!' });
+    // Compară parola folosind bcrypt cu hashedPassword
+    const isMatch = await bcrypt.compare(password, user.hashedPassword);
+
+    if (!isMatch) {
+      return res.status(401).json({ message: "Autentificare eșuată" });
+    }
+
+    // Generează tokenul JWT
+    const token = jwt.sign({ id: user.id, username: user.username }, secretKey, {
+      expiresIn: "1h",
+    });
+
+    res.status(200).json({ token,id:user.id });
   });
 });
-
-
-
-
-
-
-
 
 app.post("/create-checkout-session", async (req, res) => {
   try {
@@ -160,8 +196,8 @@ app.post("/create-checkout-session", async (req, res) => {
         quantity: item.quantity, // Asigură-te că este număr
       })),
       mode: "payment",
-      success_url: "http://localhost:5175/success",
-      cancel_url: "http://localhost:5175/",
+      success_url: "http://localhost:5174/success",
+      cancel_url: "http://localhost:5174/",
     });
 
     console.log("Created checkout session:", session);
