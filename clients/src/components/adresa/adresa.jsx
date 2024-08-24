@@ -42,7 +42,7 @@ const Adresa = ({ onChange }) => {
   };
 
   const handleChangeStrada = (event, value) => {
-    setStrada(value);
+    setStrada(value); // Setează direct valoarea selectată
   };
 
   const handleChangeBloc = (event) => {
@@ -82,10 +82,8 @@ const Adresa = ({ onChange }) => {
 
         <FormControl variant="standard" sx={{ m: 1, width: "100%" }}>
           <Autocomplete
-            onChange={(event, value) => handleChangeStrada(event, value)}
-            options={handleStreat}
-           
-            getOptionLabel={(option) => option.label}
+            onChange={handleChangeStrada}
+            options={handleStreat.map((option) => option.label)}
             id="clear-on-escape"
             clearOnEscape
             renderInput={(params) => (
