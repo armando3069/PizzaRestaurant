@@ -1,188 +1,108 @@
 [
   {
-    "id": "cbbeafc3-ae3c-47cf-ba9d-18c51e80dd10",
-    "order": {
-      "0": {
-        "name": "Pepperoni Pizza",
-        "image": "https://zugo.md/wp-content/uploads/2023/02/classic-cheese-pizza-FT-RECIPE0422-31a2c938fc2546c9a07b7011658cfd05.jpg",
-        "price": 110,
-        "quantity": 1
-      },
-      "Oras": "",
-      "Strada": "",
-      "Bloc": "",
-      "Apt": "",
-      "Scara": "",
-      "Etajul": "",
-      "Data": "2024-08-06T20:24:53.778Z"
-    }
+    "OrderID": "f60e7b59-f540-406a-a569-ca9c9916690c",
+    "UserID": "8d0d4ad5-8e0c-4346-9897-75c5daeb55f9",
+    "address": {
+      "oras": "Chișinău",
+      "strada": "Bulevardul Constantin Negruzzi",
+      "bloc": "2",
+      "apartament": "1",
+      "scara": "11",
+      "etaj": "1"
+    },
+    "items": [
+      {
+        "name": "Pizza Saleami",
+        "image": "https://corso.md/public/foods/thumbs/version_305x0x305x0x1/9a10a534be7323ad3fcbba5b982b945d.jpg",
+        "price": 130,
+        "quantity": 2,
+        "sum": 260
+      }
+    ],
+    "TotalSum": 260,
+    "date": "2024-08-23T23:43:14.072Z"
   },
   {
-    "id": "39116eae-cdb2-4daf-8dfc-e5331cc305a6",
-    "order": {
-      "0": {
-        "name": "Pepperoni Pizza",
-        "image": "https://zugo.md/wp-content/uploads/2023/02/classic-cheese-pizza-FT-RECIPE0422-31a2c938fc2546c9a07b7011658cfd05.jpg",
-        "price": 110,
-        "quantity": 4
-      },
-      "1": {
-        "name": "Quatro formaggi",
-        "image": "https://corso.md/public/foods/thumbs/version_305x0x305x0x1/192085414b99b68c3cafd728cead552e.jpg",
-        "price": 197,
-        "quantity": 2
-      },
-      "2": {
-        "name": "Coca Cola",
-        "image": "https://corso.md/public/foods/thumbs/version_305x0x305x0x1/f313bc2437bcf28bcde9e4e663e9a4d2.jpg",
-        "price": 30,
-        "quantity": 4
-      },
-      "3": {
-        "name": "Fanta",
-        "image": "https://corso.md/public/foods/thumbs/version_305x0x305x0x1/66dc9866eda69bccd2ae289a64e92a08.jpg",
-        "price": 30,
-        "quantity": 2
-      },
-      "Oras": "Durlești",
-      "Strada": "Strada Fîntînilor",
-      "Bloc": "2",
-      "Apt": "45",
-      "Scara": "55",
-      "Etajul": "55",
-      "Data": "2024-08-06T21:08:49.841Z"
-    }
-  },
-  {
-    "id": "05d2968d-98f1-4dd0-a983-5a0d466c62b3",
-    "order": {
-      "0": {
-        "name": "Margherita Pizza",
-        "image": "https://dishcrawl.com/wp-content/uploads/2021/05/california-pizza.jpg",
-        "price": 110,
-        "quantity": 1
-      },
-      "Oras": "Stăuceni",
-      "Strada": {
-        "label": "Strada Mitropolit Varlaam"
-      },
-      "Bloc": "2",
-      "Apt": "2",
-      "Scara": "22",
-      "Etajul": "",
-      "Data": "2024-08-07T15:03:34.308Z"
-    }
-  },
-  {
-    "id": "a4923c58-f64c-4ef7-aa50-3aadcc61ccd7",
-    "order": {
-      "0": {
-        "name": "Special Pizza",
-        "image": "https://dishcrawl.com/wp-content/uploads/2021/05/new-york-pizza.jpg",
-        "price": 256,
-        "quantity": 4
-      },
-      "1": {
-        "name": "Vegan Pizza",
-        "image": "https://images.prismic.io/eataly-us/527aa8aa-73b6-42f4-89ec-18d96fd88502_ech-quattro-mani-matt-roan-pizza-horizontal-web.jpg?auto=compress,format",
-        "price": 170,
-        "quantity": 1
-      },
-      "2": {
-        "name": "Beck's",
-        "image": "https://corso.md/public/foods/thumbs/version_305x0x305x0x1/0c7bef8f4553cbfb93a55805d8642ff9.jpg",
+    "OrderID": "bf71b75c-4233-441a-aab8-b98a5adb77d8",
+    "UserID": "2270603c-bcc9-495c-82e3-f1d086f94f6b",
+    "address": {
+      "oras": "Chișinău",
+      "strada": "Bulevardul Constantin Negruzzi",
+      "bloc": "2",
+      "apartament": "22",
+      "scara": "2",
+      "etaj": "2"
+    },
+    "items": [
+      {
+        "name": "Bergenbier",
+        "image": "https://corso.md/public/foods/thumbs/version_305x0x305x0x1/3fa7da1b017eb987fce690534cb13fa4.jpg",
         "price": 45,
-        "quantity": 2
+        "quantity": 1,
+        "sum": 45
       },
-      "Oras": "",
-      "Strada": "",
-      "Bloc": "",
-      "Apt": "",
-      "Scara": "",
-      "Etajul": "",
-      "Data": "2024-08-09T10:41:48.177Z"
-    }
+      {
+        "name": "Staropramen",
+        "image": "https://corso.md/public/foods/thumbs/version_305x0x305x0x1/a6742fde8fe746451a6bd86b2132fd4d.jpg",
+        "price": 60,
+        "quantity": 1,
+        "sum": 60
+      }
+    ],
+    "TotalSum": 105,
+    "date": "2024-08-23T23:55:52.859Z"
   },
   {
-    "id": "d9b553d5-49db-46bd-ac56-9c297198132d",
-    "order": {
-      "0": {
-        "name": "Vegan Pizza",
-        "image": "https://images.prismic.io/eataly-us/527aa8aa-73b6-42f4-89ec-18d96fd88502_ech-quattro-mani-matt-roan-pizza-horizontal-web.jpg?auto=compress,format",
-        "price": 170,
-        "quantity": 3
-      },
-      "1": {
-        "name": "Pineapple Pizza",
-        "image": "https://static01.nyt.com/images/2023/03/29/multimedia/23HAMREX2-pineapple-ham-pizza-qwct/HAMREX2-pineapple-ham-pizza-qwct-superJumbo.jpg",
-        "price": 120,
-        "quantity": 2
-      },
-      "2": {
-        "name": "Expensive Pizza",
-        "image": "https://www.simplyrecipes.com/thmb/KE6iMblr3R2Db6oE8HdyVsFSj2A=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__simply_recipes__uploads__2019__09__easy-pepperoni-pizza-lead-3-1024x682-583b275444104ef189d693a64df625da.jpg",
-        "price": 197,
-        "quantity": 1
-      },
-      "3": {
-        "name": "Pepperoni Pizza",
-        "image": "https://www.simplyrecipes.com/thmb/KE6iMblr3R2Db6oE8HdyVsFSj2A=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__simply_recipes__uploads__2019__09__easy-pepperoni-pizza-lead-3-1024x682-583b275444104ef189d693a64df625da.jpg",
-        "price": 150,
-        "quantity": 1
-      },
-      "4": {
-        "name": "Salata Primavera",
-        "image": "https://corso.md/public/foods/thumbs/version_305x0x305x0x1/8691b131807dc830e1df40f70401ccd1.jpg",
-        "price": 197,
-        "quantity": 2
-      },
-      "Oras": "Chișinău",
-      "Strada": {
-        "label": "Strada Creangă Ion"
-      },
-      "Bloc": "3",
-      "Apt": "1",
-      "Scara": "3",
-      "Etajul": "5",
-      "Data": "2024-08-10T08:32:41.050Z"
-    }
-  },
-  {
-    "id": "d4d787b8-7d13-41ad-a0d9-1b9be1e6f631",
-    "order": {
-      "0": {
-        "name": "Pizza Fantasia",
-        "image": "https://corso.md/public/foods/thumbs/version_305x0x305x0x1/ab87c1f1f1f2088728e2220b127ad39f.png",
-        "price": 150,
-        "quantity": 4
-      },
-      "1": {
-        "name": "Paste Gamberetti",
-        "image": "https://corso.md/public/foods/thumbs/version_305x0x305x0x1/a2ef211d1a570dc3d1d6691f58409cec.jpg",
-        "price": 197,
-        "quantity": 1
-      },
-      "2": {
+    "OrderID": "de43a712-6414-42dc-b4db-d0f855a5fad5",
+    "UserID": "8d0d4ad5-8e0c-4346-9897-75c5daeb55f9",
+    "address": {
+      "oras": "Durlești",
+      "strada": "Strada Ștefan-Vodă",
+      "bloc": "3",
+      "apartament": "2",
+      "scara": "2",
+      "etaj": "3"
+    },
+    "items": [
+      {
         "name": "Salata cu Ton",
         "image": "https://corso.md/public/foods/thumbs/version_305x0x305x0x1/acad4c9ba9319d0bfadea0840a7a1175.jpg",
         "price": 197,
-        "quantity": 1
+        "quantity": 1,
+        "sum": 197
       },
-      "3": {
-        "name": "Coca Cola",
-        "image": "https://corso.md/public/foods/thumbs/version_305x0x305x0x1/f313bc2437bcf28bcde9e4e663e9a4d2.jpg",
-        "price": 30,
-        "quantity": 2
-      },
-      "Oras": "Stăuceni",
-      "Strada": {
-        "label": "Strada Orheiului"
-      },
-      "Bloc": "2",
-      "Apt": "2",
-      "Scara": "3",
-      "Etajul": "2",
-      "Data": "2024-08-19T06:59:29.840Z"
-    }
+      {
+        "name": "Salata Caprese",
+        "image": "https://corso.md/public/foods/thumbs/version_305x0x305x0x1/a1c01c0e24481c3b4206bed1b0a78609.jpg",
+        "price": 197,
+        "quantity": 1,
+        "sum": 197
+      }
+    ],
+    "TotalSum": 394,
+    "date": "2024-08-24T00:21:42.433Z"
+  },
+  {
+    "OrderID": "b6fa04ed-e04c-4a2d-802b-72f6c17817a3",
+    "UserID": null,
+    "address": {
+      "oras": "Chișinău",
+      "strada": "Bulevardul Constantin Negruzzi",
+      "bloc": "2",
+      "apartament": "2",
+      "scara": "2",
+      "etaj": "2"
+    },
+    "items": [
+      {
+        "name": "Cafea Espresso",
+        "image": "https://corso.md/public/foods/thumbs/version_305x0x305x0x1/3b8fff96889276e0316cdf47268e6259.jpg",
+        "price": 197,
+        "quantity": 1,
+        "sum": 197
+      }
+    ],
+    "TotalSum": 197,
+    "date": "2024-08-24T00:22:50.003Z"
   }
 ]
