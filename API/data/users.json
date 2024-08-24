@@ -1,12 +1,14 @@
 [
   {
-    "id": "6b94a98d-81e6-4c34-96ca-19013a9548a8",
-    "username": "armndo3069",
-    "password": "armando@"
+    "id": "8d0d4ad5-8e0c-4346-9897-75c5daeb55f9",
+    "username": "armando3069",
+    "email": "armando@gmail.com",
+    "hashedPassword": "$2a$10$mg7blyU/YcskI7tsblbOjeFTdWq4PK4SezhtnvY/cYorL2iuJmxKO"
   },
   {
-    "id": "68dbb404-808b-489c-a9a7-83c375df88aa",
-    "username": "maaa",
-    "hashedPassword": "$2a$10$hovNYpI9CEpDR8EsuD6pruFxKWsFQOJ36zhrcDOBUm/RpzZzItXVq"
+    "id": "2270603c-bcc9-495c-82e3-f1d086f94f6b",
+    "username": "lidia",
+    "email": "lidia@gmail.com",
+    "hashedPassword": "$2a$10$tuJ62UMhW8OnvDV0QEr4BeOVhO1az4.wNtAvmmU3pQZYLe5BZ3xF6"
   }
 ]
