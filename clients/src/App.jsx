@@ -16,6 +16,9 @@ import SalateMenu from "./pages/salateMenu";
 import { ShopContextProvider } from "./context/shop-context";
 import "./App.css";
 import Signup from './components/auth/signup/signup';
+import Signin from "./components/auth/signin/signin";
+import Auth from "./components/auth/auth";
+import Account from './components/account/account';
 
 function App() {
   return (
@@ -25,7 +28,10 @@ function App() {
         <Routes>
           <Route path="/" element={<Menu />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/auth" element={<Signup />} />
+          <Route path="/account" element={<Account />} />
+          <Route path="/auth" element={<Auth />} />
+          <Route path="/auth/register" element={<Signup />} />
+          <Route path="/auth/login" element={<Signin />} />
           <Route path="/shop" element={<Shop />} />
           <Route path="/checkout" element={<CheckoutPage />} />
           <Route path="/success" element={<Succes />} />
