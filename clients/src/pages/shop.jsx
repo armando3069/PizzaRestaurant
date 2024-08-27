@@ -87,11 +87,13 @@ const Shop = () => {
                     </div>
                     <div className="policy">
                       <div className="politica_shop">
-                        <input type="checkbox" checked="checked" />
-                        <p>
+                        <div className="pil">
+                        <input  type="checkbox" checked="checked" className="inputPoli" />
+                        <p className="paragPoli">
                           Accept acordul de utilizare. Politica de
                           confidențialitate
                         </p>
+                        </div>
                       </div>
                       <CheckoutPage dataItem={dataItem} />
                     </div>
