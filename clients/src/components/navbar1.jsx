@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 import { MdOutlineShoppingCart } from "react-icons/md";
 import { ShopContext } from "../context/shop-context";
 import { MdOutlineAccountCircle } from "react-icons/md";
-
 import "../styles/nav.css";
 
 function navbar1() {
@@ -89,6 +88,9 @@ function navbar1() {
           <MdOutlineAccountCircle className="acount_nav" style={styleShop} />
 
         </Link>
+
+
+
       </div>
     </div>
   );
