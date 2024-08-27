@@ -185,6 +185,21 @@
   align-items: baseline;
   font-size: 0.9rem;
   padding: 10px 0px 15px ;
+  width: 80%;
+}
+.pil{
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+}
+.inputPoli{
+  display: flex;
+  width: 5%;
+}
+.paragPoli {
+  display: flex;
+
 }
 .total_price
 {
@@ -239,17 +254,19 @@
     .cartItem {
       /* flex-direction: column; */
       width:100%;
-      margin-top: 10px;
-      height: 100px;
+      height: 70px;
     }
     .cartItem img {
-      width: 80px;
+      width: 50px;
       margin-bottom: 10px;
       /* height: 200px; */
     }
     .cartItem .description {
       justify-content: space-between;
 
+    }
+    .politica_shop{
+      width: 100%;
     }
 
     .add_shop{
