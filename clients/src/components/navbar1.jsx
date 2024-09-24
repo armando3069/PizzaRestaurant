@@ -3,7 +3,7 @@ import logo from "./log.svg";
 import logo2 from "./log_02.svg";
 import { Link } from "react-router-dom";
 import { MdOutlineShoppingCart } from "react-icons/md";
-import { ShopContext } from "../context/shop-context";
+import { ShopContext } from "../context/shop-contextOLD";
 import { MdOutlineAccountCircle } from "react-icons/md";
 import "../styles/nav.css";
 
@@ -22,13 +22,12 @@ function navbar1() {
     }
   };
 
-  const styleShop={
-    color: color ? "#fbb418":"white",
-
-  }
-  const styleShop2={
-    color: color ? "white":"white",
-  }
+  const styleShop = {
+    color: color ? "#fbb418" : "white",
+  };
+  const styleShop2 = {
+    color: color ? "white" : "white",
+  };
 
   window.addEventListener("scroll", changeColor);
 
@@ -63,7 +62,6 @@ function navbar1() {
         </Link> */}
       </div>
       <div className="rightSide">
-
         <Link
           className={
             color ? "navItem color_navItem_dark" : "navItem color_navItem_white"
@@ -71,12 +69,12 @@ function navbar1() {
           to={"/shop"}
         >
           <div className="shoping">
-          <MdOutlineShoppingCart style={styleShop} className="acount_nav"  />
-          {totalItem ?(
-          <div className="shop_item" style={styleShop2}  >
-          {totalItem}
-          </div>
-          ):null}
+            <MdOutlineShoppingCart style={styleShop} className="acount_nav" />
+            {totalItem ? (
+              <div className="shop_item" style={styleShop2}>
+                {totalItem}
+              </div>
+            ) : null}
           </div>
         </Link>
         <Link
@@ -86,11 +84,7 @@ function navbar1() {
           to={"/auth"}
         >
           <MdOutlineAccountCircle className="acount_nav" style={styleShop} />
-
         </Link>
-
-
-
       </div>
     </div>
   );

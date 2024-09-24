@@ -5,36 +5,31 @@ import { IoMdRemoveCircleOutline } from "react-icons/io";
 import { IoMdAddCircleOutline } from "react-icons/io";
 
 
+const CartShop = ({id,menuList}) => {
+  const { addMenu, removeMenu,getItemQuantity, removeItem } = useContext(ShopContext);
 
-const CartShop = ({ id, name, image, price }) => {
-  const { addMenu, removeMenu, itemCart, removeItem } = useContext(ShopContext);
+  const item = menuList.find(i => i.id === id)
+  if (item == null) return null
 
   return (
     <div className="container_shop">
     <div className="cartItem">
-      <img  className="image_shop" src={image} />
+      <img  className="image_shop" src={item.image} />
       <div className="description">
         <p className="text_name_shop">
-          {name}
+          {item.name}
         </p>
 
         <div className="countHandler">
         <IoMdRemoveCircleOutline className="add_shop"  onClick={() => removeMenu(id)}/>
-          {/* <input
-          className="input_shop" 
-            value={itemCart[id]}
-            onChange={(e) => updateCartItemCount(Number(e.target.value), id)}
-          />
-         */}
-         <p className="item_shop">{itemCart[id]}</p>
+
+         <p className="item_shop">{getItemQuantity(id)}</p>
           <IoMdAddCircleOutline  className="remove_shop"  onClick={() => addMenu(id)} />
         </div>
-        <p className="price_shop">{price * itemCart[id]} lei</p>
+        <p className="price_shop">{item.price * getItemQuantity(id)} lei</p>
 
         <IoCloseOutline
         className="close_shop"
-          
-          
           onClick={() => {
             removeItem(id);
           }}

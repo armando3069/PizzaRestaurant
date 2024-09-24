@@ -1,16 +1,17 @@
+// CheckoutForm.jsx
 import React from 'react';
 import { loadStripe } from '@stripe/stripe-js';
 import { Elements } from '@stripe/react-stripe-js';
+const stripePromise = loadStripe('pk_test_51PfPyVIvcgr2PatmhGNhIcspQsiCVJawyrNUoxt0Rn83zLj9OGY362d2cArhEOJFVNCdLDGFWN0I128TYapYqkyP00i6flbPhb');
 
-const stripePromise = loadStripe('pk_test_51PfPyVIvcgr2PatmhGNhIcspQsiCVJawyrNUoxt0Rn83zLj9OGY362d2cArhEOJFVNCdLDGFWN0I128TYapYqkyP00i6flbPhb'); // Înlocuiește cu cheia ta publică Stripe
-
-const CheckoutForm = ({ items,order }) => {
+const CheckoutForm = ({ items}) => {
   const handleSubmit = async (event) => {
     event.preventDefault();
-
+  
+    const token = localStorage.getItem("token"); // Asigură-te că token-ul este stocat corect
+  
     try {
- 
-      // Apelează endpoint-ul pentru a crea o sesiune de checkout
+ // Apelează endpoint-ul pentru a crea o sesiune de checkout
       const checkoutResponse = await fetch('http://localhost:3001/create-checkout-session', {
         method: 'POST',
         headers: {
@@ -32,25 +33,9 @@ const CheckoutForm = ({ items,order }) => {
       } else {
         console.error('Failed to create checkout session');
       }
-
-        // Apelează endpoint-ul pentru a crea o comandă
-    const orderResponse = await fetch('http://localhost:3001/orders', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ order }),
-    });
-
-    // Verifică dacă răspunsul este OK
-    if (!orderResponse.ok) {
-      throw new Error('Order creation failed');
-    }
-
-    const orderData = await orderResponse.json();
-    console.log('Order response:', orderData); // Debugging
-    } catch (error) {
+    }catch (error) {
       console.error('Error:', error);
+      alert('A apărut o eroare la payment comenzii. Te rugăm să încerci din nou.');
     }
   };
 
@@ -61,9 +46,9 @@ const CheckoutForm = ({ items,order }) => {
   );
 };
 
-const Checkout = ({ items,order }) => (
+const Checkout = ({ items}) => (
   <Elements stripe={stripePromise}>
-    <CheckoutForm items={items} order={order} />
+    <CheckoutForm items={items} />
   </Elements>
 );
 

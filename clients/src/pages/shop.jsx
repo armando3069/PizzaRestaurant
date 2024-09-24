@@ -9,7 +9,7 @@ import CheckoutPage from "./checkOutPage";
 import Adresa from "../components/adresa/adresa";
 
 const Shop = () => {
-  const { itemCart, MenuList, getTotalCartAmount, getTotalCartItem } =
+  const { itemCart, getTotalCartAmount, getTotalCartItem } =
     useContext(ShopContext);
 
   const [menuList, setMenuList] = useState([]);
@@ -52,21 +52,9 @@ const Shop = () => {
           ) : (
             <>
               <div className="container_shoping">
-                {menuList.map((item, key) => {
-                  if (itemCart[item.id] !== 0) {
-                    return (
-                      <CartShop
-                        id={item.id}
-                        key={item.id}
-                        image={item.image}
-                        name={item.name}
-                        price={item.price}
-                        ingredients={item.ingredients}
-                      />
-                    );
-                  }
-                  return null;
-                })}
+                {itemCart.map((item) => (
+                  <CartShop key={item.id} {...item} menuList={menuList} />
+                ))}
               </div>
               <Adresa onChange={handleDataItemChange} />
 
@@ -88,11 +76,15 @@ const Shop = () => {
                     <div className="policy">
                       <div className="politica_shop">
                         <div className="pil">
-                        <input  type="checkbox" checked="checked" className="inputPoli" />
-                        <p className="paragPoli">
-                          Accept acordul de utilizare. Politica de
-                          confidențialitate
-                        </p>
+                          <input
+                            type="checkbox"
+                            checked="checked"
+                            className="inputPoli"
+                          />
+                          <p className="paragPoli">
+                            Accept acordul de utilizare. Politica de
+                            confidențialitate
+                          </p>
                         </div>
                       </div>
                       <CheckoutPage dataItem={dataItem} />

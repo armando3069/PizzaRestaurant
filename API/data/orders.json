@@ -104,5 +104,166 @@
     ],
     "TotalSum": 197,
     "date": "2024-08-24T00:22:50.003Z"
+  },
+  {
+    "OrderID": "ca1274c5-beb0-402a-8343-60078eb7edd5",
+    "UserID": "2270603c-bcc9-495c-82e3-f1d086f94f6b",
+    "address": {
+      "oras": "Durlești",
+      "strada": "Strada Ștefan-Vodă",
+      "bloc": "2",
+      "apartament": "2",
+      "scara": "2",
+      "etaj": "2"
+    },
+    "items": [
+      {
+        "name": "Pizza Saleami",
+        "image": "https://corso.md/public/foods/thumbs/version_305x0x305x0x1/9a10a534be7323ad3fcbba5b982b945d.jpg",
+        "price": 130,
+        "quantity": 1,
+        "sum": 130
+      },
+      {
+        "name": "Pizza Fantasia",
+        "image": "https://corso.md/public/foods/thumbs/version_305x0x305x0x1/ab87c1f1f1f2088728e2220b127ad39f.png",
+        "price": 150,
+        "quantity": 1,
+        "sum": 150
+      }
+    ],
+    "TotalSum": 280,
+    "date": "2024-08-24T10:57:48.705Z"
+  },
+  {
+    "OrderID": "41d5602e-7b32-49fc-9fd3-ed1eda405038",
+    "UserID": "8d0d4ad5-8e0c-4346-9897-75c5daeb55f9",
+    "address": {
+      "oras": "Chișinău",
+      "strada": "Bulevardul Cuza-Vodă",
+      "bloc": "21",
+      "apartament": "11",
+      "scara": "1",
+      "etaj": "1"
+    },
+    "items": [
+      {
+        "name": "Pizza Fantasia",
+        "image": "https://corso.md/public/foods/thumbs/version_305x0x305x0x1/ab87c1f1f1f2088728e2220b127ad39f.png",
+        "price": 150,
+        "quantity": 1,
+        "sum": 150
+      },
+      {
+        "name": "Pizza Genovese",
+        "image": "https://corso.md/public/foods/thumbs/version_305x0x305x0x1/26db120a497907eb29659a24bba914c8.jpg",
+        "price": 150,
+        "quantity": 1,
+        "sum": 150
+      }
+    ],
+    "TotalSum": 300,
+    "date": "2024-08-24T14:49:58.088Z"
+  },
+  {
+    "OrderID": "2ee4c4a1-55f4-4a54-809b-5afd52c53e8d",
+    "UserID": "8d0d4ad5-8e0c-4346-9897-75c5daeb55f9",
+    "address": {
+      "oras": "Durlești",
+      "strada": "Strada Boris Glavan",
+      "bloc": "1",
+      "apartament": "1",
+      "scara": "111",
+      "etaj": "1"
+    },
+    "items": [
+      {
+        "name": "Pizza Genovese",
+        "image": "https://corso.md/public/foods/thumbs/version_305x0x305x0x1/26db120a497907eb29659a24bba914c8.jpg",
+        "price": 150,
+        "quantity": 1,
+        "sum": 150
+      },
+      {
+        "name": "Coca Cola",
+        "image": "https://corso.md/public/foods/thumbs/version_305x0x305x0x1/f313bc2437bcf28bcde9e4e663e9a4d2.jpg",
+        "price": 30,
+        "quantity": 2,
+        "sum": 60
+      }
+    ],
+    "TotalSum": 210,
+    "date": "2024-09-01T15:16:26.054Z"
+  },
+  {
+    "OrderID": "141a7be5-8cf4-478d-8853-5609bb935db0",
+    "UserID": "8d0d4ad5-8e0c-4346-9897-75c5daeb55f9",
+    "address": {
+      "oras": "Durlești",
+      "strada": "Strada Ștefan-Vodă",
+      "bloc": "2",
+      "apartament": "3",
+      "scara": "1",
+      "etaj": "7"
+    },
+    "items": [
+      {
+        "name": "Pizza Tonno e Cippola",
+        "image": "https://corso.md/public/foods/thumbs/version_305x0x305x0x1/c6c94ef4ff6be2977a73c0f1cbbc7905.jpg",
+        "price": 140,
+        "quantity": 1,
+        "sum": 140
+      }
+    ],
+    "TotalSum": 140,
+    "date": "2024-09-01T15:20:04.662Z"
+  },
+  {
+    "OrderID": "1a6e60e4-a497-4556-9092-7cb200cfd01d",
+    "UserID": "8d0d4ad5-8e0c-4346-9897-75c5daeb55f9",
+    "address": {},
+    "items": [
+      {
+        "name": "Pizza Tonno e Cippola",
+        "image": "https://corso.md/public/foods/thumbs/version_305x0x305x0x1/c6c94ef4ff6be2977a73c0f1cbbc7905.jpg",
+        "price": 140,
+        "quantity": 1,
+        "sum": 140
+      }
+    ],
+    "TotalSum": 140,
+    "date": "2024-09-01T15:29:31.472Z"
+  },
+  {
+    "OrderID": "ad96d0d9-bafa-475c-b15a-aa817cdc792a",
+    "UserID": "8d0d4ad5-8e0c-4346-9897-75c5daeb55f9",
+    "address": {},
+    "items": [
+      {
+        "name": "Pizza Tonno e Cippola",
+        "image": "https://corso.md/public/foods/thumbs/version_305x0x305x0x1/c6c94ef4ff6be2977a73c0f1cbbc7905.jpg",
+        "price": 140,
+        "quantity": 1,
+        "sum": 140
+      }
+    ],
+    "TotalSum": 140,
+    "date": "2024-09-01T15:29:38.656Z"
+  },
+  {
+    "OrderID": "afe6d883-b654-406c-96b0-27708b68ac6b",
+    "UserID": "8d0d4ad5-8e0c-4346-9897-75c5daeb55f9",
+    "address": {},
+    "items": [
+      {
+        "name": "Pizza Tonno e Cippola",
+        "image": "https://corso.md/public/foods/thumbs/version_305x0x305x0x1/c6c94ef4ff6be2977a73c0f1cbbc7905.jpg",
+        "price": 140,
+        "quantity": 1,
+        "sum": 140
+      }
+    ],
+    "TotalSum": 140,
+    "date": "2024-09-01T15:30:23.298Z"
   }
 ]

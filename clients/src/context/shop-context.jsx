@@ -1,11 +1,13 @@
 import React, { createContext, useState, useEffect } from "react";
 import { fetchMenuList } from '../helpers/menuList';
+import { useLocalStorage } from "../hooks/useLocalStorage";
 
 export const ShopContext = createContext(null);
 
 export const ShopContextProvider = (props) => {
   const [menuList, setMenuList] = useState([]);
-  const [itemCart, setItemCart] = useState({});
+  const [order,setOrder] = useState({});
+  const [itemCart, setItemCart] = useLocalStorage("shopping-cart", []);
 
   useEffect(() => {
     const getMenuList = async () => {
@@ -16,65 +18,69 @@ export const ShopContextProvider = (props) => {
     getMenuList();
   }, []);
 
-  useEffect(() => {
-    const getDefaultCart = () => {
+  const cartQuantity = itemCart.reduce(
+    (quantity, item) => item.quantity + quantity,
+    0
+  );
 
-      let cart = {};
-      for (let i = 1; i <= menuList.length; i++) {
-        cart[i] = 0;
+  function getItemQuantity(id) {
+    return itemCart.find(item => item.id === id)?.quantity || 0;
+  }
+
+  function addMenu(id) {
+    setItemCart(currItems => {
+      if (currItems.find(item => item.id === id) == null) {
+        return [...currItems, { id, quantity: 1 }];
+      } else {
+        return currItems.map(item => {
+          if (item.id === id) {
+            return { ...item, quantity: item.quantity + 1 };
+          } else {
+            return item;
+          }
+        });
       }
-      return cart;
-    };
+    });
+  }
 
-    setItemCart(getDefaultCart());
-  }, [menuList]);
+  function removeMenu(id) {
+    setItemCart(currItems => {
+      if (currItems.find(item => item.id === id)?.quantity === 1) {
+        return currItems.filter(item => item.id !== id);
+      } else {
+        return currItems.map(item => {
+          if (item.id === id) {
+            return { ...item, quantity: item.quantity - 1 };
+          } else {
+            return item;
+          }
+        });
+      }
+    });
+  }
 
-  useEffect(() => {
-    localStorage.setItem('itemCart', JSON.stringify(itemCart));
-  }, [itemCart]);
-
-
-  const addMenu = (itemID) => {
-    setItemCart((prev) => ({
-      ...prev,
-      [itemID]: (prev[itemID] || 0) + 1,
-    }));
-  };
-
-  const removeMenu = (itemID) => {
-    setItemCart((prev) => ({
-      ...prev,
-      [itemID]: (prev[itemID] || 0) - 1,
-    }));
-  };
-
-  const removeItem = (itemID) => {
-    setItemCart((prev) => ({
-      ...prev,
-      [itemID]: 0,
-    }));
-  };
+  function removeItem(id) {
+    setItemCart(currItems => {
+      return currItems.filter(item => item.id !== id);
+    });
+  }
 
   const getTotalCartAmount = () => {
     let totalAmount = 0;
-    for (const item in itemCart) {
-      if (itemCart[item] > 0) {
-        const infoItem = menuList.find((product) => product.id === Number(item));
-        if (infoItem) {
-          totalAmount += itemCart[item] * infoItem.price;
-        }
+    itemCart.forEach(item => {
+      const infoItem = menuList.find(product => product.id === item.id);
+      if (infoItem) {
+        totalAmount += item.quantity * infoItem.price;
       }
-    }
+    });
     return totalAmount;
   };
 
   const getTotalCartItem = () => {
     let totalItem = 0;
-    for (const item in itemCart) {
-      if (itemCart[item] > 0) {
-        totalItem += itemCart[item];
-      }
-    }
+    itemCart.forEach(item => {
+      totalItem += item.quantity;
+    });
     return totalItem;
   };
 
@@ -84,8 +90,12 @@ export const ShopContextProvider = (props) => {
     removeMenu,
     getTotalCartAmount,
     getTotalCartItem,
+    getItemQuantity,
     removeItem,
     menuList,
+    cartQuantity,
+    setOrder,
+    order
   };
 
   return (

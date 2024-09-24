@@ -37,37 +37,47 @@ function Navbar1() {
 
   return (
     <div className={color ? "Viewport  bgColor_white" : "Viewport  bgColor"}>
+      <div
+        className={
+          color ? "navbar sticky bgColor_white" : "navbar sticky bgColor"
+        }
+      >
+        <div className="hamburger-menu" onClick={toggleMenu}>
+          <GiHamburgerMenu />
+        </div>
+        <div className="leftSide">
+          <Link to={"/"}>
+            <img id="img_logo" src={color ? logo2 : logo} alt="logo" />
+          </Link>
+        </div>
 
-    <div className={color ? "navbar sticky bgColor_white" : "navbar sticky bgColor"}>
-      <div className="hamburger-menu" onClick={toggleMenu}>
-        <GiHamburgerMenu />
-      </div>
-      <div className="leftSide">
-        <Link to={"/"}>
-          <img id="img_logo" src={color ? logo2 : logo} alt="logo" />
-        </Link>
-      </div>
+        <div className={`rightSide ${isMenuOpen ? "open" : ""}`}>
+          <Link
+            className={
+              color
+                ? "navItem color_navItem_dark"
+                : "navItem color_navItem_white"
+            }
+            to={"/"}
+          >
+            Menu
+          </Link>
 
-
-      <div className={`rightSide ${isMenuOpen ? "open" : ""}`}>
+          <Link
+            className={
+              color
+                ? "navItem color_navItem_dark"
+                : "navItem color_navItem_white"
+            }
+            to={"/auth"}
+          >
+            <MdOutlineAccountCircle className="acount_nav" style={styleShop} />
+          </Link>
+        </div>
         <Link
-          className={color ? "navItem color_navItem_dark" : "navItem color_navItem_white"}
-          to={"/"}
-        >
-          Menu
-        </Link>
-
-        <Link
-          className={color ? "navItem color_navItem_dark" : "navItem color_navItem_white"}
-          to={"/auth"}
-        >
-          <MdOutlineAccountCircle className="acount_nav" style={styleShop} />
-        </Link>
-
-
-      </div>
-      <Link
-          className={color ? "navItem color_navItem_dark" : "navItem color_navItem_white"}
+          className={
+            color ? "navItem color_navItem_dark" : "navItem color_navItem_white"
+          }
           to={"/shop"}
         >
           <div className="shoping">
@@ -78,9 +88,8 @@ function Navbar1() {
               </div>
             ) : null}
           </div>
-          
         </Link>
-    </div>
+      </div>
     </div>
   );
 }

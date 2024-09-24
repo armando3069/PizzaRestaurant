@@ -61,8 +61,9 @@ app.get('/orders', (req, res) => {
 });
 
 
-app.post("/orders", (req, res) => {
+app.post("/orders",authenticateToken, (req, res) => {
   const newData = { OrderID: uuidv4(), ...req.body }; // Adaugă un ID unic
+  console.log("Received items:", newData);
 
   // Verifică dacă fișierul există
   if (!fs.existsSync(ordersFilePath)) {
@@ -103,6 +104,19 @@ app.post("/orders", (req, res) => {
     );
   });
 });
+
+function authenticateToken(req, res, next) {
+  const authHeader = req.headers['authorization'];
+  const token = authHeader && authHeader.split(' ')[1];
+
+  if (!token) return res.sendStatus(401);
+
+  jwt.verify(token, secretKey, (err, user) => {
+    if (err) return res.sendStatus(403);
+    req.user = user;
+    next();
+  });
+}
 
 app.post("/register", async (req, res) => {
   const { username, email, password } = req.body;

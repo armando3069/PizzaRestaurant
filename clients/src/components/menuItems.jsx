@@ -7,9 +7,10 @@ import { ShopContext } from "../context/shop-context";
 
 function MenuItem({ id, name, image, price, ingredients }) {
   const [modalIngredient, setModalIngredient] = useState(false);
-  const { itemCart, addMenu } = useContext(ShopContext);
+  const { addMenu, getItemQuantity} = useContext(ShopContext);
 
-  const cartItemCount = itemCart[id];
+       const quantity = getItemQuantity(id)
+
 
   return (
     <div className="container">
@@ -44,7 +45,7 @@ function MenuItem({ id, name, image, price, ingredients }) {
               />
             </div>
 
-            <div className="amount_menu">{cartItemCount}</div>
+            <div className="amount_menu">{quantity}</div>
           </div>
         </div>
       </div>

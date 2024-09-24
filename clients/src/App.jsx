@@ -1,6 +1,6 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom"; // Folosește Routes în loc de Switch
-import Navbar from "./components/navbar1";
+import Navbar from "./components/navbar2";
 import Footer from "./components/footer";
 import Menu from "./pages/menu";
 import Contact from "./pages/contact";

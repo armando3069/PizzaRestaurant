@@ -4,16 +4,16 @@
     "name": "Pizza Saleami",
     "image": "https://corso.md/public/foods/thumbs/version_305x0x305x0x1/9a10a534be7323ad3fcbba5b982b945d.jpg",
     "price": 130,
-    "grams":640,
+    "grams": 640,
     "ingredients": "Sos Pomodori pelati, vînătă coaptă, roșii, ceapă roșie, maioneză de post.",
     "category": "Pizza"
   },
   {
     "id": 2,
     "name": "Pizza Fantasia",
-    "image": "https://corso.md/public/foods/thumbs/version_305x0x305x0x1/ab87c1f1f1f2088728e2220b127ad39f.png",
+    "image": "https://corso.md/public/foods/thumbs/version_305x0x305x0x1/0b586bfc87e31b447de4953dad779ad6.jpg",
     "price": 150,
-    "grams":640,
+    "grams": 640,
     "ingredients": "Mozzarella, frișcă, bacon, anghinare marinate, măsline verzi, gorgonzola.",
     "category": "Pizza"
   },
@@ -22,7 +22,7 @@
     "name": "Pizza Genovese",
     "image": "https://corso.md/public/foods/thumbs/version_305x0x305x0x1/26db120a497907eb29659a24bba914c8.jpg",
     "price": 150,
-    "grams":680,
+    "grams": 680,
     "ingredients": "",
     "category": "Pizza"
   },
@@ -31,7 +31,7 @@
     "name": "Pizza Mexicană",
     "image": "https://corso.md/public/foods/thumbs/version_305x0x305x0x1/f338ec73272eb1e45b76bdc5f9504284.jpg",
     "price": 135,
-    "grams":540,
+    "grams": 540,
     "ingredients": "Sos pizza, mozzarella, saleami picant, porumb, măsline verzi.",
     "category": "Pizza"
   },
@@ -40,7 +40,7 @@
     "name": "Pizza Gusto",
     "image": "https://corso.md/public/foods/thumbs/version_305x0x305x0x1/5e18b61685c57de5df6496aef91fddd0.png",
     "price": 140,
-    "grams":630,
+    "grams": 630,
     "ingredients": "Sos Pomodori pelati, vînătă coaptă, roșii, ceapă roșie, maioneză de post.",
     "category": "Pizza"
   },
@@ -49,7 +49,7 @@
     "name": "Pizza Fresca",
     "image": "https://corso.md/public/foods/thumbs/version_305x0x305x0x1/b5ef166c2a34019fd6bee73e7c84ac73.png",
     "price": 125,
-    "grams":570,
+    "grams": 570,
     "ingredients": "Sos de pizza, mozzarella, gorgonzola, rucola, roșii cherry, parmezan.",
     "category": "Pizza"
   },
@@ -58,7 +58,7 @@
     "name": "Spinaci e saleami",
     "image": "https://corso.md/public/foods/thumbs/version_305x0x305x0x1/db0aa6fde917a2fbf2e7640842a7ca1e.png",
     "price": 145,
-    "grams":600,
+    "grams": 600,
     "ingredients": "Sos de pizza, mozzarella, saleami picant, spanac, gorgonzola",
     "category": "Pizza"
   },
@@ -67,7 +67,7 @@
     "name": "Pizza Bianca",
     "image": "https://corso.md/public/foods/thumbs/version_305x0x305x0x1/8f352b189bea14bd1a24cb11c75a0604.png",
     "price": 130,
-    "grams":610,
+    "grams": 610,
     "ingredients": "Mozzarella, șuncă, piept de pui, frișcă, porumb.",
     "category": "Pizza"
   },
@@ -76,7 +76,7 @@
     "name": "Pizza Con tutto",
     "image": "https://corso.md/public/foods/thumbs/version_305x0x305x0x1/e203d9599c299d52852f9b1bd04aacd2.jpg",
     "price": 140,
-    "grams":680,
+    "grams": 680,
     "ingredients": "Pomodori pelati, mozzarella, șuncă, salam, bacon, ciuperci, măsline, ardei gras, ceapă roșie.",
     "category": "Pizza"
   },
@@ -85,7 +85,7 @@
     "name": "Pizza Proscitto Funghi",
     "image": "https://corso.md/public/foods/thumbs/version_305x0x305x0x1/0b586bfc87e31b447de4953dad779ad6.jpg",
     "price": 125,
-    "grams":550,
+    "grams": 550,
     "ingredients": "Pomodori pelati, mozzarella, șuncă, ciuperci.",
     "category": "Pizza"
   },
@@ -94,7 +94,7 @@
     "name": "Pizza Quatro formaggi",
     "image": "https://corso.md/public/foods/thumbs/version_305x0x305x0x1/f65c4a310d62428367680d3c94716931.jpg",
     "price": 135,
-    "grams":480,
+    "grams": 480,
     "ingredients": "Pomodori pelati, mozzarella, caşcaval, gorgonzola, parmezan",
     "category": "Pizza"
   },
@@ -103,7 +103,7 @@
     "name": "Pizza Furiosa",
     "image": "https://corso.md/public/foods/thumbs/version_305x0x305x0x1/9cdecb5a1ec8b1b27ea42e43c5d4d908.jpg",
     "price": 135,
-    "grams":560,
+    "grams": 560,
     "ingredients": "Sos Pomodori pelati, mozzarella, bacon, salam, cabanos, ardei iute, chilly.",
     "category": "Pizza"
   },
@@ -112,7 +112,7 @@
     "name": "Pizza Rustică",
     "image": "https://corso.md/public/foods/thumbs/version_305x0x305x0x1/5fe8628d3ecbb604019511159fa2f764.jpg",
     "price": 140,
-    "grams":630,
+    "grams": 630,
     "ingredients": "Pomodori pelati, mozzarella, şuncă, salam, cabanos, ciuperci, măsline, ardei gras.",
     "category": "Pizza"
   },
@@ -121,7 +121,7 @@
     "name": "Pizza Quatro Stagioni",
     "image": "https://corso.md/public/foods/thumbs/version_305x0x305x0x1/8f4aa2eaeac68abac6821999f7215dfb.jpg",
     "price": 130,
-    "grams":590,
+    "grams": 590,
     "ingredients": "Pomodori pelati, mozzarella, şuncă, salam, ciuperci, ardei gras.",
     "category": "Pizza"
   },
@@ -130,7 +130,7 @@
     "name": "Pizza Tonno e Cippola",
     "image": "https://corso.md/public/foods/thumbs/version_305x0x305x0x1/c6c94ef4ff6be2977a73c0f1cbbc7905.jpg",
     "price": 140,
-    "grams":630,
+    "grams": 630,
     "ingredients": "Sos Pomodori pelati, mozzarella, ton, măsline, ceapă roşie, lămâie.",
     "category": "Pizza"
   },
@@ -139,7 +139,7 @@
     "name": "Pizza Țărănească",
     "image": "https://corso.md/public/foods/thumbs/version_305x0x305x0x1/ebc7bcad78f88c379503184fa17f68b3.jpg",
     "price": 135,
-    "grams":610,
+    "grams": 610,
     "ingredients": "Sos Pomodori pelati, vînătă coaptă, roșii, ceapă roșie, maioneză de post.",
     "category": "Pizza"
   },

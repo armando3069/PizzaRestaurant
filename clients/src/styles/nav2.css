@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Coming+Soon&display=swap');
+
+#img_logo {
+  width: 150px;
+  height: auto;
+  object-fit: contain;
+}
+.Viewport{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #d41818;
+    position: relative;
+    z-index: 1003;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 80px;
+  background-color: #768f88;
+  position: relative;
+  z-index: 1001;
+  max-width: 1200px;
+  padding: 0 20px 0;
+}
+
+.bgColor {
+  background-color: #768f88;
+  transition: background-color 0.5s ease;
+}
+
+.bgColor_white {
+  background-color: #ffffff;
+  transition: background-color 0.5s ease;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.leftSide {
+  display: flex;
+  align-items: center;
+}
+
+.rightSide {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.navItem {
+  text-decoration: none;
+  font-size: 25px;
+  font-family: "Cera Pro";
+  margin-left: 10px;
+  transition: 0.3s ease-in;
+}
+
+.color_navItem_white {
+  color: white;
+}
+
+.color_navItem_dark {
+  color: #4b4f54;
+}
+
+.rightSide a:hover {
+  color: #fbb418;
+}
+
+.shoping {
+  position: relative;
+}
+
+.shop_item {
+  background-color: #d41818;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  font-size: 1rem;
+  text-align: center;
+  position: absolute;
+  top: -5px;
+  left: 30px;
+  font-weight: 500;
+}
+
+.acount_nav {
+  font-size: 40px;
+}
+
+/* Hamburger menu styles */
+.hamburger-menu {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+  color: #4b4f54;
+}
+
+/* Responsive styles for small screens */
+@media only screen and (max-width: 600px) {
+  .hamburger-menu {
+    display: block;
+  }
+
+  .rightSide {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    background-color: #768f88;
+    position: absolute;
+    top: 80px;
+    left: 0;
+  }
+
+  .rightSide.open {
+    display: flex;
+  }
+
+  .navItem {
+    padding: 10px 0;
+    font-size: 20px;
+  }
+
+  .shop_item {
+    width: 15px;
+    height: 15px;
+    left: 22px;
+    font-size: 0.9rem;
+  }
+
+  .acount_nav {
+    font-size: 30px;
+  }
+
+  #img_logo {
+    width: 100px;
+  }
+}
