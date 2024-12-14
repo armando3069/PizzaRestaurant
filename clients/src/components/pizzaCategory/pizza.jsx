@@ -1,18 +1,18 @@
-import React, { useState, useEffect, useContext } from "react";
-import { ShopContext } from "../../context/shop-context";
+import { useState, useEffect} from "react";
 import MenuItems from "../../components/menuItems";
 import { MdOutlineSubdirectoryArrowRight } from "react-icons/md";
 import { Link } from "react-router-dom";
-
-//import toast, { Toaster } from "react-hot-toast";
-
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import bigO from "../../styles/bigO.webp";
 import { responsive } from "../../helpers/utility";
 
+import { useSelector } from "react-redux";
+
 const Pizza = () => {
-  const { menuList } = useContext(ShopContext);
+  const menuList = useSelector((state) => state.menuList);
+
+
   const [CategoryPizza, setCategoryPizza] = useState("All");
   const [windowDimensions, setWindowDimensions] = useState({
     width: window.innerWidth,
