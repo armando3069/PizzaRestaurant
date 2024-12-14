@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from "react";
+import { useState, useEffect, useContext } from "react";
 import { ShopContext } from "../../context/shop-context";
 import MenuItems from "../../components/menuItems";
 import { MdOutlineSubdirectoryArrowRight } from "react-icons/md";

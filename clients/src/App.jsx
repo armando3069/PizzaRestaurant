@@ -1,7 +1,5 @@
-import React from "react";
 import { Route, Routes } from "react-router-dom"; // Folosește Routes în loc de Switch
 import Navbar from "./components/navbar2";
-import Footer from "./components/footer";
 import Menu from "./pages/menu";
 import Contact from "./pages/contact";
 import NotFound from "./pages/404";
@@ -15,10 +13,10 @@ import BauturiMenu from "./pages/bauturiMenu";
 import SalateMenu from "./pages/salateMenu";
 import { ShopContextProvider } from "./context/shop-context";
 import "./App.css";
-import Signup from './components/auth/signup/signup';
+import Signup from "./components/auth/signup/signup";
 import Signin from "./components/auth/signin/signin";
 import Auth from "./components/auth/auth";
-import Account from './components/account/account';
+import Account from "./components/account/account";
 
 function App() {
   return (
