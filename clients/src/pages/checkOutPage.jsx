@@ -1,9 +1,12 @@
-import React, { useContext } from "react";
+import  { useContext } from "react";
 import { ShopContext } from "../context/shop-context";
 import Checkout from "../components/checkout/checkoutForm";
+import { useDispatch, useSelector } from "react-redux";
 
 const CheckoutPage = ({ dataItem }) => {
   const { itemCart, menuList} = useContext(ShopContext);
+//  const { itemCart, menuList, cartQuantity, order } = useSelector(state => state);
+
   const { oras, strada, bloc, apartament, scara, etaj } = dataItem;
 
   const cartItems = itemCart

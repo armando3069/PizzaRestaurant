@@ -1,11 +1,13 @@
-import React, { useState, useContext } from "react";
-import { ShopContext } from "../context/shop-context";
+import  { useState} from "react";
 import MenuItems from "../components/menuItems";
 import bigO from "../styles/bigO.webp";
 import "../styles/bauturi.css"
+import {useSelector } from "react-redux";
 
 const BauturiMenu = () => {
-  const { menuList } = useContext(ShopContext);
+  const { menuList } = useSelector(state => state);
+
+
   const [CategoryBauturi, setCategoryBauturi] = useState("All");
 
   const FillterCategoryBauturi =
