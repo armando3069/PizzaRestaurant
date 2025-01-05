@@ -1,10 +1,10 @@
-import React, { useContext } from "react";
-import { ShopContext } from "../context/shop-context";
+import React from "react";
 import MenuItems from "../components/menuItems";
 import bigO from "../styles/bigO.webp";
+import { useSelector } from "react-redux";
 
 const SalateMenu = () => {
-  const { menuList } = useContext(ShopContext);
+  const menuList = useSelector((state) => state.menuList);
 
   return (
     <div className="menu-viewport">

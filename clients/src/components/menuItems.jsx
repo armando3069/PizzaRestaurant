@@ -1,16 +1,29 @@
-import React, { useState, useContext } from "react";
+import React, { useState } from "react";
 import "../styles/menu.css";
 import { MdOutlineShoppingBag } from "react-icons/md";
 import { RiInformationLine } from "react-icons/ri";
 import { AiOutlineCloseCircle } from "react-icons/ai";
-import { ShopContext } from "../context/shop-context";
+
+//redux actions
+import { useSelector, useDispatch } from "react-redux";
+import { addMenu } from "../redux/action";
 
 function MenuItem({ id, name, image, price, ingredients }) {
+
+  const dispatch = useDispatch();
+  const itemCart  = useSelector(state => state.itemCart);
+
   const [modalIngredient, setModalIngredient] = useState(false);
-  const { addMenu, getItemQuantity} = useContext(ShopContext);
 
-       const quantity = getItemQuantity(id)
+  const addItem = (id) => {
+    dispatch(addMenu(id));
+  };
 
+  function getItemQuantity(id) {
+    return itemCart.find((item) => item.id === id)?.quantity || 0;
+  }
+
+  const quantity = getItemQuantity(id);
 
   return (
     <div className="container">
@@ -37,9 +50,8 @@ function MenuItem({ id, name, image, price, ingredients }) {
             <div className="bg_logo">
               <MdOutlineShoppingBag
                 onClick={() => {
-                  addMenu(id);
+                  addItem(id);
                 }}
-                
                 className="logo"
                 color="white"
               />

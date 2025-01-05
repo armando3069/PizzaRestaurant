@@ -1,24 +1,26 @@
-import React,{useState,useContext} from 'react'
-import { ShopContext } from "../context/shop-context";
+import React, { useState } from "react";
+
 import MenuItems from "../components/menuItems";
 import bigO from "../styles/bigO.webp";
+import { useSelector } from "react-redux";
 
 import "../styles/menu.css";
 const PizzaMenu = () => {
-    const { menuList } = useContext(ShopContext);
-    const [CategoryPizza, setCategoryPizza] = useState("All");
+  const menuList = useSelector((state) => state.menuList);
 
-    const FillterCategoryPizza =
+  const [CategoryPizza, setCategoryPizza] = useState("All");
+
+  const FillterCategoryPizza =
     CategoryPizza === "All"
       ? menuList.filter(
           (item) => item.category === "Pizza" || item.category === "Calzone"
         )
       : menuList.filter((item) => item.category === CategoryPizza);
-  
+
   return (
-    <div className='menu-viewport'>
+    <div className="menu-viewport">
       <div className="menu">
-      <div className="filter_container">
+        <div className="filter_container">
           <div className="filterBTN">
             <div className="container_Logo">
               <img src={bigO} className="bigO_logo" alt="" />
@@ -45,24 +47,24 @@ const PizzaMenu = () => {
             </div>
           </div>
         </div>
-      <div className="menuList">
-      {FillterCategoryPizza.map((item, key) => {
-                return (
-                  <MenuItems
-                    //notify={notify}
-                    id={item.id}
-                    key={key}
-                    image={item.image}
-                    name={item.name}
-                    price={item.price}
-                    ingredients={item.ingredients}
-                  />
-                );
-              })}
-             </div> 
+        <div className="menuList">
+          {FillterCategoryPizza.map((item, key) => {
+            return (
+              <MenuItems
+                //notify={notify}
+                id={item.id}
+                key={key}
+                image={item.image}
+                name={item.name}
+                price={item.price}
+                ingredients={item.ingredients}
+              />
+            );
+          })}
+        </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default PizzaMenu
+export default PizzaMenu;

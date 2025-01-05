@@ -1,45 +1,55 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, {useEffect, useState } from "react";
 import "../styles/cart.css";
-import { fetchMenuList } from "../helpers/menuList";
-
-import { ShopContext } from "../context/shop-context";
 import CartShop from "../components/cartShop";
-import { useNavigate } from "react-router-dom";
 import CheckoutPage from "./checkOutPage";
 import Adresa from "../components/adresa/adresa";
 
-const Shop = () => {
-  const { itemCart, getTotalCartAmount, getTotalCartItem } =
-    useContext(ShopContext);
+import { fetchMenuList } from "../helpers/menuList";
+import { useDispatch, useSelector } from "react-redux";
+import { setMenuList} from "../redux/action";
 
-  const [menuList, setMenuList] = useState([]);
+const Shop = () => {
+  const dispatch = useDispatch();
+
+  const menuList = useSelector((state) => state.menuList);
+  const itemCart = useSelector((state) => state.itemCart);
+
   const [dataItem, setDataItem] = useState({});
 
+
+  const getTotalCartAmount = () => {
+  let totalAmount = 0;
+  
+  if (itemCart && menuList) { 
+    itemCart.forEach(item => {
+      const infoItem = menuList.find(product => product.id === item.id);
+      if (infoItem) {
+        totalAmount += item.quantity * infoItem.price;
+      }
+    });
+  }
+
+  return totalAmount;
+};
+
+
   const totalAmount = getTotalCartAmount();
-  const totalItem = getTotalCartItem();
-  const navigate = useNavigate();
+
 
   useEffect(() => {
     const getMenuList = async () => {
       const data = await fetchMenuList();
-      setMenuList(data);
+      dispatch(setMenuList(data));
     };
 
     getMenuList();
-  }, []);
+  }, [dispatch]);
+
 
   const handleDataItemChange = (newDataItem) => {
     setDataItem(newDataItem);
   };
 
-  // const cartsItems = MenuList?.filter((item) => itemCart[item.id] > 0).map(
-  //   (item) => ({
-  //     name: item.name,
-  //     image: item.image,
-  //     price: item.price,
-  //     quantity: itemCart[item.id],
-  //   })
-  // );
 
   const isCartEmpty = Object.values(itemCart).every((count) => count === 0);
 
@@ -53,7 +63,7 @@ const Shop = () => {
             <>
               <div className="container_shoping">
                 {itemCart.map((item) => (
-                  <CartShop key={item.id} {...item} menuList={menuList} />
+                  <CartShop key={item.id} {...item} />
                 ))}
               </div>
               <Adresa onChange={handleDataItemChange} />
