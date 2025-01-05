@@ -7,9 +7,20 @@ import { MdOutlineAccountCircle } from "react-icons/md";
 import { GiHamburgerMenu } from "react-icons/gi"; // Iconul de hamburger
 import { ShopContext } from "../context/shop-context";
 import "../styles/nav2.css";
+import { useDispatch, useSelector } from "react-redux";
+
 
 function Navbar1() {
-  const { getTotalCartItem } = useContext(ShopContext);
+  const itemCart = useSelector(state=>state.itemCart);
+
+  const getTotalCartItem = () => {
+    let totalItem = 0;
+    itemCart.forEach(item => {
+      totalItem += item.quantity;
+    });
+    return totalItem;
+  };
+
   const totalItem = getTotalCartItem();
   const [color, setColor] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
