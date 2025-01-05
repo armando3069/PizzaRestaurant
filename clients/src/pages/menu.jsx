@@ -1,4 +1,4 @@
-import React, { useMemo } from "react";
+import React, { useMemo,useEffect } from "react";
 import "../styles/menu.css";
 
 import Panel from "../components/panel/panel";
@@ -7,7 +7,22 @@ import Paste from "../components/pasteCategory/paste";
 import Salate from "../components/salateCategory/salate";
 import Bauturi from "../components/bauturiCategory/bauturi";
 
+import { fetchMenuList } from "../helpers/menuList";
+import { useDispatch } from "react-redux";
+import { setMenuList } from "../redux/action";
+
 function Menu() {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    const getMenuList = async () => {
+      const data = await fetchMenuList();
+      dispatch(setMenuList(data));
+    };
+
+    getMenuList();
+  }, [dispatch]);
+
   const memoizedPanel = useMemo(() => <Panel />, []);
   const memoizedPizza = useMemo(() => <Pizza />, []);
   const memoizedPaste = useMemo(() => <Paste />, []);
